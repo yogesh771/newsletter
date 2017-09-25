@@ -1,0 +1,292 @@
+D:\NewLetter\NewLetter\bin\NewLetter.dll
+D:\NewLetter\NewLetter\bin\NewLetter.pdb
+D:\NewLetter\NewLetter\bin\Antlr3.Runtime.dll
+D:\NewLetter\NewLetter\bin\EntityFramework.dll
+D:\NewLetter\NewLetter\bin\Microsoft.Web.Infrastructure.dll
+D:\NewLetter\NewLetter\bin\Newtonsoft.Json.dll
+D:\NewLetter\NewLetter\bin\System.Net.Http.Formatting.dll
+D:\NewLetter\NewLetter\bin\System.Web.Http.dll
+D:\NewLetter\NewLetter\bin\System.Web.Http.WebHost.dll
+D:\NewLetter\NewLetter\bin\System.Web.Mvc.dll
+D:\NewLetter\NewLetter\bin\System.Web.Optimization.dll
+D:\NewLetter\NewLetter\bin\System.Web.Providers.dll
+D:\NewLetter\NewLetter\bin\System.Web.Razor.dll
+D:\NewLetter\NewLetter\bin\System.Web.WebPages.Deployment.dll
+D:\NewLetter\NewLetter\bin\System.Web.WebPages.dll
+D:\NewLetter\NewLetter\bin\System.Web.WebPages.Razor.dll
+D:\NewLetter\NewLetter\bin\WebGrease.dll
+D:\NewLetter\NewLetter\bin\EntityFramework.xml
+D:\NewLetter\NewLetter\bin\Newtonsoft.Json.xml
+D:\NewLetter\NewLetter\bin\System.Net.Http.Formatting.xml
+D:\NewLetter\NewLetter\bin\System.Web.Http.xml
+D:\NewLetter\NewLetter\bin\System.Web.Http.WebHost.xml
+D:\NewLetter\NewLetter\bin\System.Web.Mvc.xml
+D:\NewLetter\NewLetter\bin\System.Web.Razor.xml
+D:\NewLetter\NewLetter\bin\System.Web.WebPages.xml
+D:\NewLetter\NewLetter\bin\System.Web.WebPages.Deployment.xml
+D:\NewLetter\NewLetter\bin\System.Web.WebPages.Razor.xml
+D:\NewLetter\NewLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\NewLetter\NewLetter\obj\Debug\NewLetter.dll
+D:\NewLetter\NewLetter\obj\Debug\NewLetter.pdb
+H:\NewLetter\NewLetter\bin\NewLetter.dll.config
+H:\NewLetter\NewLetter\bin\NewLetter.dll
+H:\NewLetter\NewLetter\bin\NewLetter.pdb
+H:\NewLetter\NewLetter\bin\Antlr3.Runtime.dll
+H:\NewLetter\NewLetter\bin\EntityFramework.dll
+H:\NewLetter\NewLetter\bin\Microsoft.Web.Infrastructure.dll
+H:\NewLetter\NewLetter\bin\Newtonsoft.Json.dll
+H:\NewLetter\NewLetter\bin\System.Net.Http.Formatting.dll
+H:\NewLetter\NewLetter\bin\System.Web.Http.dll
+H:\NewLetter\NewLetter\bin\System.Web.Http.WebHost.dll
+H:\NewLetter\NewLetter\bin\System.Web.Mvc.dll
+H:\NewLetter\NewLetter\bin\System.Web.Optimization.dll
+H:\NewLetter\NewLetter\bin\System.Web.Providers.dll
+H:\NewLetter\NewLetter\bin\System.Web.Razor.dll
+H:\NewLetter\NewLetter\bin\System.Web.WebPages.Deployment.dll
+H:\NewLetter\NewLetter\bin\System.Web.WebPages.dll
+H:\NewLetter\NewLetter\bin\System.Web.WebPages.Razor.dll
+H:\NewLetter\NewLetter\bin\WebGrease.dll
+H:\NewLetter\NewLetter\bin\EntityFramework.xml
+H:\NewLetter\NewLetter\bin\Newtonsoft.Json.xml
+H:\NewLetter\NewLetter\bin\System.Net.Http.Formatting.xml
+H:\NewLetter\NewLetter\bin\System.Web.Http.xml
+H:\NewLetter\NewLetter\bin\System.Web.Http.WebHost.xml
+H:\NewLetter\NewLetter\bin\System.Web.Mvc.xml
+H:\NewLetter\NewLetter\bin\System.Web.Razor.xml
+H:\NewLetter\NewLetter\bin\System.Web.WebPages.xml
+H:\NewLetter\NewLetter\bin\System.Web.WebPages.Deployment.xml
+H:\NewLetter\NewLetter\bin\System.Web.WebPages.Razor.xml
+H:\NewLetter\NewLetter\obj\Debug\NewLetter.dll
+H:\NewLetter\NewLetter\obj\Debug\NewLetter.pdb
+H:\NewLetter\NewLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\NewsLetter Pdf Export With Styles\NewsLetter\obj\Debug\NewLetter.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\NewLetter.dll.config
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\NewLetter.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\NewLetter.pdb
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\Microsoft.Web.Infrastructure.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\Newtonsoft.Json.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Net.Http.Formatting.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.WebHost.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Mvc.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Razor.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Deployment.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Razor.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\Microsoft.Web.Infrastructure.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Net.Http.Formatting.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.WebHost.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Mvc.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Razor.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Deployment.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Razor.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\obj\Debug\NewLetter.pdb
+D:\NewsLetter Pdf Export With Styles\NewsLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\Project\NewsLetter\NewsLetter\bin\NewLetter.dll.config
+D:\Project\NewsLetter\NewsLetter\bin\NewLetter.dll
+D:\Project\NewsLetter\NewsLetter\bin\NewLetter.pdb
+D:\Project\NewsLetter\NewsLetter\bin\EntityFramework.dll
+D:\Project\NewsLetter\NewsLetter\bin\EntityFramework.SqlServer.dll
+D:\Project\NewsLetter\NewsLetter\bin\EntityFramework.xml
+D:\Project\NewsLetter\NewsLetter\bin\EntityFramework.SqlServer.xml
+D:\Project\NewsLetter\NewsLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\Project\NewsLetter\NewsLetter\obj\Debug\NewLetter.dll
+D:\Project\NewsLetter\NewsLetter\obj\Debug\NewLetter.pdb
+D:\Project\NewsLetter\NewsLetter\obj\Debug\NewLetter.csproj.App.config
+D:\Project\NewsLetter\NewsLetter\bin\Antlr3.Runtime.dll
+D:\Project\NewsLetter\NewsLetter\bin\Newtonsoft.Json.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Net.Http.Extensions.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Net.Http.Formatting.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Net.Http.Primitives.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Helpers.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Http.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Http.WebHost.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Mvc.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Optimization.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Providers.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Razor.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.WebPages.Deployment.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.WebPages.dll
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.WebPages.Razor.dll
+D:\Project\NewsLetter\NewsLetter\bin\WebGrease.dll
+D:\Project\NewsLetter\NewsLetter\bin\Antlr3.Runtime.pdb
+D:\Project\NewsLetter\NewsLetter\bin\Newtonsoft.Json.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Net.Http.Extensions.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Net.Http.Formatting.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Net.Http.Primitives.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Helpers.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Http.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Http.WebHost.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Mvc.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Optimization.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Providers.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.Razor.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.WebPages.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.WebPages.Deployment.xml
+D:\Project\NewsLetter\NewsLetter\bin\System.Web.WebPages.Razor.xml
+D:\Project\NewsLetter\NewsLetter\bin\WebMatrix.Data.dll
+D:\Project\NewsLetter\NewsLetter\bin\WebMatrix.WebData.dll
+D:\Project\NewsLetter\NewsLetter\bin\WebMatrix.WebData.xml
+D:\Project\NewsLetter\NewsLetter\bin\WebMatrix.Data.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\NewLetter.dll.config
+C:\Users\abhijeet\Desktop\NewsLetter\bin\NewLetter.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\NewLetter.pdb
+C:\Users\abhijeet\Desktop\NewsLetter\bin\Antlr3.Runtime.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\EntityFramework.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\EntityFramework.SqlServer.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\Newtonsoft.Json.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\SendGrid.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Net.Http.Extensions.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Net.Http.Formatting.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Net.Http.Primitives.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Helpers.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Http.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Http.WebHost.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Mvc.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Optimization.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Providers.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Razor.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.WebPages.Deployment.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.WebPages.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.WebPages.Razor.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\WebGrease.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\WebMatrix.Data.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\WebMatrix.WebData.dll
+C:\Users\abhijeet\Desktop\NewsLetter\bin\Antlr3.Runtime.pdb
+C:\Users\abhijeet\Desktop\NewsLetter\bin\EntityFramework.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\EntityFramework.SqlServer.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\Newtonsoft.Json.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\SendGrid.pdb
+C:\Users\abhijeet\Desktop\NewsLetter\bin\SendGrid.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Net.Http.Extensions.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Net.Http.Formatting.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Net.Http.Primitives.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Helpers.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Http.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Http.WebHost.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Mvc.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Optimization.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Providers.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.Razor.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.WebPages.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.WebPages.Deployment.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\System.Web.WebPages.Razor.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\WebMatrix.Data.xml
+C:\Users\abhijeet\Desktop\NewsLetter\bin\WebMatrix.WebData.xml
+C:\Users\abhijeet\Desktop\NewsLetter\obj\Debug\NewLetter.csproj.App.config
+C:\Users\abhijeet\Desktop\NewsLetter\obj\Debug\NewLetter.dll
+C:\Users\abhijeet\Desktop\NewsLetter\obj\Debug\NewLetter.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\obj\Debug\NewLetter.csproj.App.config
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\obj\Debug\NewLetter.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\obj\Debug\NewLetter.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\NewLetter.dll.config
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\NewLetter.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\NewLetter.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\Antlr3.Runtime.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\EntityFramework.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\EntityFramework.SqlServer.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\Newtonsoft.Json.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\SendGrid.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\SendGrid.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Net.Http.Extensions.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Net.Http.Formatting.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Net.Http.Primitives.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Helpers.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Http.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Http.WebHost.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Mvc.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Optimization.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Providers.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.Razor.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.WebPages.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.WebPages.Deployment.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\System.Web.WebPages.Razor.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\Microsoft.Web.Infrastructure.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\WebMatrix.Data.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\WebMatrix.WebData.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\HtmlRenderer.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\HtmlRenderer.PdfSharp.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\PdfSharp.Charting.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\PdfSharp.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\HtmlRenderer.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\HtmlRenderer.PdfSharp.pdb
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\PdfSharp.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\PdfSharp.Charting.xml
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\de\PdfSharp.resources.dll
+D:\Project\NewsLetter\Abhijit NewsLetter version 10 employer and company details saved 1.8.2017\NewsLetter\bin\de\PdfSharp.Charting.resources.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\NewLetter.dll.config
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\NewLetter.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\NewLetter.pdb
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\HtmlRenderer.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\HtmlRenderer.PdfSharp.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\Microsoft.Web.Helpers.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\PdfSharp.Charting.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\PdfSharp.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\System.Net.Http.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\System.Security.Cryptography.Algorithms.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\System.Security.Cryptography.Encoding.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\System.Security.Cryptography.Primitives.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\HtmlRenderer.pdb
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\HtmlRenderer.PdfSharp.pdb
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\PdfSharp.xml
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\PdfSharp.Charting.xml
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\de\PdfSharp.resources.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\bin\de\PdfSharp.Charting.resources.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\obj\Debug\NewLetter.csproj.App.config
+D:\Project\abhijeet25_08_2017\NewsLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\Project\abhijeet25_08_2017\NewsLetter\obj\Debug\NewLetter.dll
+D:\Project\abhijeet25_08_2017\NewsLetter\obj\Debug\NewLetter.pdb
+D:\Project_Backups\current working\NewsLetter\bin\NewLetter.dll.config
+D:\Project_Backups\current working\NewsLetter\bin\NewLetter.dll
+D:\Project_Backups\current working\NewsLetter\bin\NewLetter.pdb
+D:\Project_Backups\current working\NewsLetter\bin\HtmlRenderer.dll
+D:\Project_Backups\current working\NewsLetter\bin\HtmlRenderer.PdfSharp.dll
+D:\Project_Backups\current working\NewsLetter\bin\Microsoft.Web.Helpers.dll
+D:\Project_Backups\current working\NewsLetter\bin\PdfSharp.Charting.dll
+D:\Project_Backups\current working\NewsLetter\bin\PdfSharp.dll
+D:\Project_Backups\current working\NewsLetter\bin\System.Net.Http.dll
+D:\Project_Backups\current working\NewsLetter\bin\System.Security.Cryptography.Algorithms.dll
+D:\Project_Backups\current working\NewsLetter\bin\System.Security.Cryptography.Encoding.dll
+D:\Project_Backups\current working\NewsLetter\bin\System.Security.Cryptography.Primitives.dll
+D:\Project_Backups\current working\NewsLetter\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Project_Backups\current working\NewsLetter\bin\HtmlRenderer.pdb
+D:\Project_Backups\current working\NewsLetter\bin\HtmlRenderer.PdfSharp.pdb
+D:\Project_Backups\current working\NewsLetter\bin\PdfSharp.xml
+D:\Project_Backups\current working\NewsLetter\bin\PdfSharp.Charting.xml
+D:\Project_Backups\current working\NewsLetter\bin\de\PdfSharp.resources.dll
+D:\Project_Backups\current working\NewsLetter\bin\de\PdfSharp.Charting.resources.dll
+D:\Project_Backups\current working\NewsLetter\obj\Debug\NewLetter.csproj.App.config
+D:\Project_Backups\current working\NewsLetter\obj\Debug\NewLetter.dll
+D:\Project_Backups\current working\NewsLetter\obj\Debug\NewLetter.pdb
+D:\Project_Backups\current working\NewsLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\Integration\NewsLetter\bin\NewLetter.dll.config
+D:\Integration\NewsLetter\bin\NewLetter.dll
+D:\Integration\NewsLetter\bin\NewLetter.pdb
+D:\Integration\NewsLetter\bin\HtmlRenderer.dll
+D:\Integration\NewsLetter\bin\HtmlRenderer.PdfSharp.dll
+D:\Integration\NewsLetter\bin\Microsoft.Web.Helpers.dll
+D:\Integration\NewsLetter\bin\PdfSharp.Charting.dll
+D:\Integration\NewsLetter\bin\PdfSharp.dll
+D:\Integration\NewsLetter\bin\System.Net.Http.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.Algorithms.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.Encoding.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.Primitives.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Integration\NewsLetter\bin\HtmlRenderer.pdb
+D:\Integration\NewsLetter\bin\HtmlRenderer.PdfSharp.pdb
+D:\Integration\NewsLetter\bin\PdfSharp.xml
+D:\Integration\NewsLetter\bin\PdfSharp.Charting.xml
+D:\Integration\NewsLetter\bin\de\PdfSharp.resources.dll
+D:\Integration\NewsLetter\bin\de\PdfSharp.Charting.resources.dll
+D:\Integration\NewsLetter\obj\Debug\NewLetter.csproj.App.config
+D:\Integration\NewsLetter\obj\Debug\NewLetter.csprojResolveAssemblyReference.cache
+D:\Integration\NewsLetter\obj\Debug\NewLetter.dll
+D:\Integration\NewsLetter\obj\Debug\NewLetter.pdb
+D:\Integration\NewsLetter\bin\System.Net.Http.Formatting.dll
+D:\Integration\NewsLetter\bin\System.Net.Http.Formatting.xml

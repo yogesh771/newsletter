@@ -1,0 +1,143 @@
+﻿@model NewLetter.Models.EmployerModel
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Quendidate</title>
+    <!-- Bootstrap -->
+
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>*@
+
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+ 
+   
+    <style>
+        span.col_1.tleft.text-danger.field-validation-error :before {
+            content: " Warning ! ";
+            color: red;
+            font-weight: bold;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
+
+</head>
+<body id="employment">
+    @{ var id = ViewBag.qenID;}
+
+    <div class="container">
+        <div class="row sub-container">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="top-logos">
+                    <img src="/images/qendidate-logo.png" />
+                    <img src="/images/orion-logo.png" />
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+
+                <div class="right-box">
+
+                    <div class="form">
+
+                        <h1>EMPLOYMENT</h1>
+
+                        @{ if (Model.employers.Count() != 0)
+                            {
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th>Company Name</th>
+                                            <th>Designation</th>
+                                            <th>From</th>
+                                           
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="certificatelistbody">
+                                        @{int row = 0;  }
+                                        @foreach (var data in Model.employers)
+                                        {
+                                          
+                                            <tr>
+                                             
+                                                <td>@data.CompanyName</td>
+                                                <td>@data.qenPosition</td>
+                                                <td>@data.qenEmpFrom <br>@data.qenEmpTo</td>
+                                               
+                                                <td>
+                                                    <a onclick="return editCerificate(@data.qenEmploymentNum);"><i class="glyphicon glyphicon-edit"></i></a>
+                                                    <a onclick="return deleteCerificate(@data.qenEmploymentNum,this);" id="delete_@data.qenEmploymentNum"><i class="glyphicon glyphicon-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                                            }
+                        }
+                        <div id="AddSkills">
+                            @Html.Action("EmploymentAddPop", new { qenid = @id })
+                        </div>
+
+                        <div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("certifications", "NewLetter",new { qenid = @Model.qenid })'">Previous</a>
+                            <a class="nxt-btn" onclick="location.href='@Url.Action("skills", "NewLetter",new { qenid = @Model.qenid })'">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function editCerificate(empno)
+       {
+           debugger
+           var URL = '@Url.Action("EmploymentAddPop", "NewLetter")?empno=' + empno;
+           $.get(URL, function (data) {
+               debugger
+               $("#AddSkills").html(data);
+           });
+       }
+
+        function deleteCerificate(empno, ID)
+       {
+           debugger         
+           var URL = '@Url.Action("Deletejob", "NewLetter")?empno=' + empno;
+
+
+               $.get(URL, function (data) {
+                   debugger
+                   location = location.href;
+               });
+
+
+       }
+    </script>
+</body>
+</html>
+
+    

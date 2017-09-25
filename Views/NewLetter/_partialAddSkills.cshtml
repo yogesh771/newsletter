@@ -1,0 +1,28 @@
+﻿@model NewLetter.Models.qenSkillName
+
+
+@using (Html.BeginForm("AddSkills", "NewLetter", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.qenSkillsID)
+    @Html.HiddenFor(m => m.qenID)
+
+    <div class="group">
+        @Html.TextBoxFor(model => model.skillName, new { placeholder = "skill" })
+        <div class="alert alert-warning error-custom" role="alert">
+            @Html.ValidationMessageFor(model => model.skillName, "", new { @class = "col_1 tleft text-danger" })   
+        </div>
+    </div>
+        <div class="group">
+            @Html.TextBoxFor(model => model.yearOfExp, new { placeholder = "year of Exp", maxlength = "100" })
+            <div class="alert alert-warning error-custom" role="alert">
+                @Html.ValidationMessageFor(model => model.yearOfExp, "", new { @class = "col_1 tleft text-danger" })
+            </div>
+        </div>
+            <input type="submit" name="save" class="plus-btn" style="background:url(/images/plus-btn.png) no-repeat center" value="" />
+            <br /><br /><br />
+ 
+
+}
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

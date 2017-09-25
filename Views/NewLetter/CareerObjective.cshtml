@@ -1,0 +1,113 @@
+﻿@model IEnumerable<NewLetter.Models.qendidatePHD>
+@{
+    ViewBag.Title = "Career Objective";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Quendidate</title>
+    <!-- Bootstrap -->
+
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>*@
+
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnnext").click(function () {
+                debugger
+                if (!$("input[name='acceptterms']:checked").val()) {
+                    alert('Please agree to terms and conditions');
+                    return false;
+                }
+            });
+        });
+
+    </script>
+
+    <style>
+        span.col_1.tleft.text-danger.field-validation-error :before {
+            content: " Warning ! ";
+            color: red;
+            font-weight: bold;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
+</head>
+
+<body id="certi">
+    @{ var id = ViewBag.qenID;}
+    @{var txt=ViewBag.careerObjective; }
+    <div class="container">
+        <div class="row sub-container">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="top-logos">
+                    <img src="/images/qendidate-logo.png" />
+                    <img src="/images/orion-logo.png" />
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+
+                <div class="right-box">
+
+                   @using (Html.BeginForm("CareerObjective", "NewLetter", FormMethod.Post, new { id = "msform" }))
+                   {
+                    <div class="form">
+                        @Html.AntiForgeryToken()
+
+                        <h1>Career Objective</h1>
+                        <div class="group">
+                            <textarea  name="CareerObjective"  placeholder = "Career Objective"  cols="40" rows="4" >@txt</textarea>
+                              <input type="hidden" value='@id' name="hdn_qenID" />                      
+                        </div>
+
+                        <p><h3>Terms & Conditions</h3></p>
+                        <p style="text-align:justify">By clicking the submit button, I certify that the facts contained in this application are true and complete to the best of my knowledge and understand that, if employed, falsified statements on this application shall be grounds for dismissal. I authorize investigation of all statements contained herein and the references and employers listed above to give you any and all information concerning my previous employment and any pertinent information they may have, personal or otherwise, and release the company from all liability for any damage that may result from utilization of such information. I also understand and agree that no representative of the company has any authority to enter into any agreement for employement for any specified period of time, or to make any agreement contrary to the foregoing, unless it is in writing and signed by an authorized company representative. This online application does not permit the release or use of disability-related or medical information in a manner prohibited by the American with Disabilities Act (ADA) and other relevant federal and state laws.</p>
+
+                        <p><strong>I have read and agree to the above statement </strong></p>
+
+                        <div style="display:flex" class="col_1 tleft">
+                            @Html.RadioButton("acceptterms", "1")&nbsp;I agree
+
+                        </div>
+
+                        <div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("RefrenceInfo", "NewLetter", new { qenID = @id })'">Previous</a>
+
+                            <input type="submit" name="Submit" id="btnnext" class="Submit action-button" value="Submit" />
+                        </div>
+                    </div>
+                   }
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+</body>
+</html>

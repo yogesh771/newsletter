@@ -1,0 +1,1633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE8DCF59-F996-45BB-9769-0BE58F027542}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewLetter</RootNamespace>
+    <AssemblyName>NewLetter</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlRenderer.Core.1.5.0.6\lib\net45\HtmlRenderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlRenderer.PdfSharp, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebHelpers.3.2.3\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.8.0.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Sendgrid.9.9.0\lib\net452\SendGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.2\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net46\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="HelperUtility\AttributeFilterUtility.cs" />
+    <Compile Include="Controllers\NewLetterController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\advertisementList.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\app_error_log.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\App_status.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseClass.cs" />
+    <Compile Include="Models\baseModel.cs" />
+    <Compile Include="Models\Candidate_status.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\city.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\companyDetail.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\country.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\currency.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Education.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployerDetail.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\employerType.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmploymentType.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\finalQendidateList.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\genderList.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HiredCandidate.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\industry.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InterViewerComment.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jobDetail.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jobSavedQendidate.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jobSkill.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\jobStatu.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\orionDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>orionDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\orionDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\orionDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>orionDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProfilePerformance.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenAppliedJob.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidateGraduation.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidateList.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidateListInJob.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidatePGraduation.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidatePHD.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidateProfileSharedWith.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidateSavedForReference.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qendidateTestSchedule.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenEmpDetail.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenHigherSecondary.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenInterviewSchedule.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenMialSendInterested.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenReference.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenResume.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenSecondary.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\qenSkill.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ResumeModel.cs" />
+    <Compile Include="Models\role.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\role_action.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\salaryUnit.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\skill.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\state.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>orionDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ValidationClasses.cs" />
+    <Compile Include="MyExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\NewLetter.dll" />
+    <Content Include="bin\NewLetter.pdb" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\SendGrid.dll" />
+    <Content Include="bin\System.Net.Http.Extensions.dll" />
+    <Content Include="bin\System.Net.Http.Primitives.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Providers.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\WebMatrix.Data.dll" />
+    <Content Include="bin\WebMatrix.WebData.dll" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS\Style.css" />
+    <Content Include="Content\CustomStyle.css" />
+    <Content Include="Content\dataTables\demo_page.css" />
+    <Content Include="Content\dataTables\demo_table.css" />
+    <Content Include="Content\dataTables\demo_table_jui.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\lib\html2canvas.js" />
+    <Content Include="Content\lib\html2canvas.min.js" />
+    <Content Include="Content\lib\jquery.js" />
+    <Content Include="Content\lib\jquery.min.js" />
+    <Content Include="Content\lib\jspdf.js" />
+    <Content Include="Content\lib\jspdf.min.js" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\main.js" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\resume.1498622987.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\academic-bg.png" />
+    <Content Include="images\blue-bg.jpg" />
+    <Content Include="images\employment-bg.png" />
+    <Content Include="images\green-tick.png" />
+    <Content Include="images\hat-icon.png" />
+    <Content Include="images\orion-logo.png" />
+    <Content Include="images\personal-details-bg.png" />
+    <Content Include="images\plus-btn.png" />
+    <Content Include="images\qendidate-logo.png" />
+    <Content Include="images\references-bg.png" />
+    <Content Include="images\skills-bg.png" />
+    <Content Include="images\spot-logo.png" />
+    <Content Include="images\thankyou-bg.png" />
+    <Content Include="images\thankyou-bg1.png" />
+    <Content Include="images\user-icon-refer.png" />
+    <Content Include="images\user-icon-stars.png" />
+    <Content Include="images\user-icon-tie.png" />
+    <Content Include="images\user-icon.png" />
+    <Content Include="images\welcome-bg - Copy.png" />
+    <Content Include="images\welcome-bg.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="Logo\01edcc5b-de55-4f9b-8d45-c56af31b70e2_EmptyLogo.jpg" />
+    <Content Include="Logo\05b424de-48f2-4bee-9c58-c1812f5e78a3_EmptyLogo.jpg" />
+    <Content Include="Logo\0f91dba2-10cb-4d3e-b6b3-333388ed797a_EmptyLogo.jpg" />
+    <Content Include="Logo\2abef094-5818-4f92-9b0f-491e4eff1a86_EmptyLogo.jpg" />
+    <Content Include="Logo\2d89ac2c-9b1e-4d83-89f7-dfcc55d4cf8a_EmptyLogo.jpg" />
+    <Content Include="Logo\76913d1d-8f9e-43b9-82d9-36e464a53cc2_EmptyLogo.jpg" />
+    <Content Include="Logo\9d70286f-738e-4b41-a511-dddf649290bc_EmptyLogo.jpg" />
+    <Content Include="Logo\b50353ed-dfa1-4a2b-b74f-cfd3c2b25647_EmptyLogo.jpg" />
+    <Content Include="Logo\ba06aee9-1eef-41f6-8d3c-d842c924b835_EmptyLogo.jpg" />
+    <Content Include="Logo\cd900576-7ed1-4922-93ab-3dd6859d1247_EmptyLogo.jpg" />
+    <Content Include="Logo\d5a1b196-5613-4743-917b-ac637fa39f86_EmptyLogo.jpg" />
+    <Content Include="Logo\EmptyLogo.jpg" />
+    <Content Include="Models\orionDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>orionDBModel.edmx</DependentUpon>
+      <LastGenOutput>orionDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\orionDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>orionDBModel.edmx</DependentUpon>
+      <LastGenOutput>orionDBModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll" />
+    <Content Include="packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.pdb" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\migrate.exe" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\migrate.exe" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\migrate.exe" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net20\HtmlRenderer.dll" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net20\HtmlRenderer.pdb" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net30\HtmlRenderer.dll" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net30\HtmlRenderer.pdb" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net35-client\HtmlRenderer.dll" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net35-client\HtmlRenderer.pdb" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net40-client\HtmlRenderer.dll" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net40-client\HtmlRenderer.pdb" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net45\HtmlRenderer.dll" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\lib\net45\HtmlRenderer.pdb" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net20\HtmlRenderer.PdfSharp.dll" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net20\HtmlRenderer.PdfSharp.pdb" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net35-client\HtmlRenderer.PdfSharp.dll" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net35-client\HtmlRenderer.PdfSharp.pdb" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net40-client\HtmlRenderer.PdfSharp.dll" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net40-client\HtmlRenderer.PdfSharp.pdb" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.pdb" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\readme.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <EntityDeploy Include="Models\orionDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>orionDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\orionDBModel.edmx.diagram">
+      <DependentUpon>orionDBModel.edmx</DependentUpon>
+    </Content>
+    <None Include="packages\jQuery.1.7.1.1\Content\Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="packages\jQuery.1.7.1.1\Content\Scripts\jquery-1.7.1.js" />
+    <Content Include="packages\jQuery.1.7.1.1\Content\Scripts\jquery-1.7.1.min.js" />
+    <None Include="packages\jQuery.1.7.1.1\Tools\jquery-1.7.1.intellisense.js" />
+    <None Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1-vsdoc.js" />
+    <Content Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1.js" />
+    <Content Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1.min.js" />
+    <Content Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1.slim.min.js" />
+    <None Include="packages\jQuery.3.1.1\Tools\jquery-3.1.1.intellisense.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\accordion.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\all.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\autocomplete.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\base.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\button.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\core.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\datepicker.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\dialog.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\draggable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\jquery-ui.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\jquery-ui.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\menu.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\progressbar.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\resizable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\selectable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\selectmenu.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\slider.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\sortable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\spinner.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\tabs.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\theme.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Content\themes\base\tooltip.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Content\Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery-ui.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\Content\Scripts\jquery-ui-1.8.20.min.js" />
+    <None Include="packages\jQuery.Validation.1.16.0\Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="packages\jQuery.Validation.1.16.0\Content\Scripts\jquery.validate.js" />
+    <Content Include="packages\jQuery.Validation.1.16.0\Content\Scripts\jquery.validate.min.js" />
+    <None Include="packages\jQuery.Validation.1.9.0.1\Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="packages\jQuery.Validation.1.9.0.1\Content\Scripts\jquery.validate.js" />
+    <Content Include="packages\jQuery.Validation.1.9.0.1\Content\Scripts\jquery.validate.min.js" />
+    <Content Include="packages\knockoutjs.2.1.0\Content\Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="packages\knockoutjs.2.1.0\Content\Scripts\knockout-2.1.0.js" />
+    <Content Include="packages\knockoutjs.3.4.2\Content\Scripts\knockout-3.4.2.debug.js" />
+    <Content Include="packages\knockoutjs.3.4.2\Content\Scripts\knockout-3.4.2.js" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.xml" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.xml" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.1.1\readme.html" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.xml" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\ReadMe.txt" />
+    <Content Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\system.web.optimization.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebHelpers.3.2.3\lib\net45\Microsoft.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.WebData.3.2.3\lib\net45\WebMatrix.WebData.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl5\System.IO.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl5\System.IO.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Runtime.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Runtime.xml" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Threading.Tasks.dll" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Threading.Tasks.xml" />
+    <Content Include="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.Tasks.dll" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.2.0.20710.0\Content\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.2.0.20710.0\Content\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.3.2.3\Content\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.3.2.3\Content\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.2.0.20710.0\Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.2.0.20710.0\Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.3\Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.3\Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monotouch\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monotouch\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monotouch\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\monotouch\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.WebRequest.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net40\System.Net.Http.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net45\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8+wpa81\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\ensureRedirect.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\portable-net45+win8\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.Primitives.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\sl4-windowsphone71\System.Net.Http.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Extensions.XML" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\lib\Xamarin.iOS10\System.Net.Http.Primitives.xml" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Modernizr.2.5.3\Content\Scripts\modernizr-2.5.3.js" />
+    <Content Include="packages\Modernizr.2.8.3\Content\Scripts\modernizr-2.8.3.js" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\sl3-wp\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\sl3-wp\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\sl4-windowsphone71\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\sl4-windowsphone71\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\sl4\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\sl4\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\winrt45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\lib\winrt45\Newtonsoft.Json.xml" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\lib\net20\de\PdfSharp.Charting.resources.dll" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\lib\net20\de\PdfSharp.resources.dll" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.xml" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.xml" />
+    <Content Include="packages\Sendgrid.9.9.0\lib\net452\SendGrid.dll" />
+    <Content Include="packages\Sendgrid.9.9.0\lib\net452\SendGrid.pdb" />
+    <Content Include="packages\Sendgrid.9.9.0\lib\net452\SendGrid.xml" />
+    <Content Include="packages\Sendgrid.9.9.0\lib\netstandard1.3\SendGrid.dll" />
+    <Content Include="packages\Sendgrid.9.9.0\lib\netstandard1.3\SendGrid.pdb" />
+    <Content Include="packages\Sendgrid.9.9.0\lib\netstandard1.3\SendGrid.xml" />
+    <Content Include="packages\System.Net.Http.4.3.2\dotnet_library_license.txt" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\net46\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\net46\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\netcore50\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\netstandard1.1\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\netstandard1.3\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\runtimes\unix\lib\netstandard1.6\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\runtimes\win\lib\net46\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\runtimes\win\lib\netcore50\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\runtimes\win\lib\netstandard1.3\System.Net.Http.dll" />
+    <Content Include="packages\System.Net.Http.4.3.2\ThirdPartyNotices.txt" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\dotnet_library_license.txt" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net46\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\net461\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\net463\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\net46\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\netstandard1.3\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\netstandard1.4\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\netstandard1.6\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\osx\lib\netstandard1.6\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\unix\lib\netstandard1.6\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\win\lib\net461\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\win\lib\net463\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\win\lib\net46\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\runtimes\win\lib\netstandard1.6\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ThirdPartyNotices.txt" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\dotnet_library_license.txt" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\net46\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\de\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\es\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\fr\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\it\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\ja\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\ko\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\ru\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\zh-hans\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\netstandard1.3\zh-hant\System.Security.Cryptography.Encoding.xml" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\runtimes\unix\lib\netstandard1.3\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\runtimes\win\lib\net46\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\runtimes\win\lib\netstandard1.3\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ThirdPartyNotices.txt" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\dotnet_library_license.txt" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\netstandard1.3\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\net46\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\netstandard1.3\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ThirdPartyNotices.txt" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\dotnet_library_license.txt" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net46\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\net461\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\net46\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\de\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\es\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\fr\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\it\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\ja\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\ko\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\ru\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\zh-hans\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.3\zh-hant\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\de\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\es\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\fr\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\it\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\ja\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\ko\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\ru\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\zh-hans\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\netstandard1.4\zh-hant\System.Security.Cryptography.X509Certificates.xml" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\runtimes\unix\lib\netstandard1.6\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\runtimes\win\lib\net461\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\runtimes\win\lib\net46\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\runtimes\win\lib\netcore50\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\runtimes\win\lib\netstandard1.6\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ThirdPartyNotices.txt" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\license.txt" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\css\dialog.css" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\buttons.png" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\icons.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\items.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\menu_arrow.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\menu_check.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\progress.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\img\tabs.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\utils\editable_selects.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\utils\form_utils.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\utils\mctabs.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\compat3x\utils\validate.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\help\img\logo.png" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\help\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\hr\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\paste\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\print\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\toc\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\themes\inlite\theme.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\themes\modern\theme.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\themes\modern\theme.min.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\tinymce.js" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\tinymce.min.js" />
+    <Content Include="packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll" />
+    <Content Include="packages\WebGrease.1.1.0\lib\WebGrease.dll" />
+    <Content Include="packages\WebGrease.1.1.0\tools\WG.exe" />
+    <Content Include="packages\WebGrease.1.6.0\lib\WebGrease.dll" />
+    <Content Include="packages\WebGrease.1.6.0\tools\WG.EXE" />
+    <Content Include="Scripts\additional-methods.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CustomJs.js" />
+    <Content Include="bin\NewLetter.dll.config" />
+    <Content Include="fonts\Gotham-Bold.ttf" />
+    <Content Include="fonts\SEGOEUI.TTF" />
+    <Content Include="fonts\verdanaReg.ttf" />
+    <Content Include="packages\Antlr.3.5.0.2\Antlr.3.5.0.2.nupkg" />
+    <Content Include="packages\EntityFramework.5.0.0\Content\App.config.transform" />
+    <Content Include="packages\EntityFramework.5.0.0\Content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.5.0.0\EntityFramework.5.0.0.nupkg" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.PS3.psd1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\install.ps1" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\Redirect.config" />
+    <Content Include="packages\EntityFramework.5.0.0\tools\Redirect.VS11.config" />
+    <Content Include="packages\EntityFramework.6.1.3\content\App.config.transform" />
+    <Content Include="packages\EntityFramework.6.1.3\content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.6.1.3\EntityFramework.6.1.3.nupkg" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.6.1.3\tools\install.ps1" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\content\net40\App.config.transform" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\content\net40\Web.config.transform" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\EntityFramework.6.2.0-beta1.nupkg" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.6.2.0-beta1\tools\install.ps1" />
+    <Content Include="packages\HtmlRenderer.Core.1.5.0.6\HtmlRenderer.Core.1.5.0.6.nupkg" />
+    <Content Include="packages\HtmlRenderer.PdfSharp.1.5.0.6\HtmlRenderer.PdfSharp.1.5.0.6.nupkg" />
+    <Content Include="packages\jQuery.1.7.1.1\jQuery.1.7.1.1.nupkg" />
+    <Content Include="packages\jQuery.1.7.1.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.1.7.1.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.1.7.1.1\Tools\uninstall.ps1" />
+    <Content Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1.min.map" />
+    <Content Include="packages\jQuery.3.1.1\Content\Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="packages\jQuery.3.1.1\jQuery.3.1.1.nupkg" />
+    <Content Include="packages\jQuery.3.1.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.3.1.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.3.1.1\Tools\uninstall.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\jQuery.UI.Combined.1.12.1.nupkg" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.12.1\Tools\uninstall.ps1" />
+    <Content Include="packages\jQuery.UI.Combined.1.8.20.1\jQuery.UI.Combined.1.8.20.1.nupkg" />
+    <Content Include="packages\jQuery.Validation.1.16.0\jQuery.Validation.1.16.0.nupkg" />
+    <Content Include="packages\jQuery.Validation.1.9.0.1\jQuery.Validation.1.9.0.1.nupkg" />
+    <Content Include="packages\knockoutjs.2.1.0\knockoutjs.2.1.0.nupkg" />
+    <Content Include="packages\knockoutjs.3.4.2\knockoutjs.3.4.2.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.4.0.20710.0\Microsoft.AspNet.Mvc.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\Content\Web.config.install.xdt" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\Content\Web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.2.3\Microsoft.AspNet.Mvc.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.1.1\Microsoft.AspNet.Providers.Core.1.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.Core.2.0.0\Microsoft.AspNet.Providers.Core.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDb.1.1\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDb.1.1\Microsoft.AspNet.Providers.LocalDb.1.1.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDb.1.1\tools\Install.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDB.2.0.0\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDB.2.0.0\Microsoft.AspNet.Providers.LocalDB.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Providers.LocalDB.2.0.0\tools\Install.ps1" />
+    <Content Include="packages\Microsoft.AspNet.Razor.2.0.20710.0\Microsoft.AspNet.Razor.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.2.3\Microsoft.AspNet.Razor.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.0.0\Microsoft.AspNet.Web.Optimization.1.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.4.0.20710.0\Microsoft.AspNet.WebApi.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.5.2.3\Microsoft.AspNet.WebApi.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\Microsoft.AspNet.WebApi.Client.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Client.5.2.3\Microsoft.AspNet.WebApi.Client.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\Microsoft.AspNet.WebApi.Core.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\Content\web.config.transform" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.Core.5.2.3\Microsoft.AspNet.WebApi.Core.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\Microsoft.AspNet.WebApi.WebHost.5.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebHelpers.3.2.3\Microsoft.AspNet.WebHelpers.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.2.0.20710.0\Microsoft.AspNet.WebPages.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\Content\Web.config.install.xdt" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\Content\Web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.2.3\Microsoft.AspNet.WebPages.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.Data.3.2.3\Microsoft.AspNet.WebPages.Data.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.WebData.3.2.3\Microsoft.AspNet.WebPages.WebData.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\monoandroid\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\monotouch\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\net45\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net45+win8+wp8+wpa81\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net45+win8+wpa81\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net451+win81+wpa81\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-net451+win81\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\portable-win81+wp81+wpa81\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\win8\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\wp8\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\wpa81\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\lib\Xamarin.iOS10\_._" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\License-Stable.rtf" />
+    <Content Include="packages\Microsoft.Bcl.1.1.10\Microsoft.Bcl.1.1.10.nupkg" />
+    <Content Include="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" />
+    <Content Include="packages\Microsoft.Bcl.Build.1.0.21\License-Stable.rtf" />
+    <Content Include="packages\Microsoft.Bcl.Build.1.0.21\Microsoft.Bcl.Build.1.0.21.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.2.0.20710.0\Microsoft.jQuery.Unobtrusive.Ajax.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Ajax.3.2.3\Microsoft.jQuery.Unobtrusive.Ajax.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.2.0.20710.0\Microsoft.jQuery.Unobtrusive.Validation.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.2.3\Microsoft.jQuery.Unobtrusive.Validation.3.2.3.nupkg" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\lib\net45\_._" />
+    <Content Include="packages\Microsoft.Net.Http.2.0.20710.0\Microsoft.Net.Http.2.0.20710.0.nupkg" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\License-Stable.rtf" />
+    <Content Include="packages\Microsoft.Net.Http.2.2.29\Microsoft.Net.Http.2.2.29.nupkg" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <Content Include="packages\Modernizr.2.5.3\Modernizr.2.5.3.nupkg" />
+    <Content Include="packages\Modernizr.2.8.3\Modernizr.2.8.3.nupkg" />
+    <Content Include="packages\Modernizr.2.8.3\Tools\common.ps1" />
+    <Content Include="packages\Modernizr.2.8.3\Tools\install.ps1" />
+    <Content Include="packages\Modernizr.2.8.3\Tools\uninstall.ps1" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\LICENSE.md" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\Newtonsoft.Json.10.0.3.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.10.0.3\tools\install.ps1" />
+    <Content Include="packages\Newtonsoft.Json.4.5.6\Newtonsoft.Json.4.5.6.nupkg" />
+    <Content Include="packages\PDFsharp.1.32.3057.0\PDFsharp.1.32.3057.0.nupkg" />
+    <Content Include="packages\repositories.config" />
+    <Content Include="packages\Sendgrid.9.9.0\Sendgrid.9.9.0.nupkg" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\monoandroid10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\monotouch10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\net45\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\portable-net45+win8+wpa81\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\win8\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\wpa81\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\Xamarinmac20\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\monoandroid10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\monotouch10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\net45\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\portable-net45+win8+wpa81\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\win8\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\wpa81\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\Xamarinmac20\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Net.Http.4.3.2\System.Net.Http.4.3.2.nupkg" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Algorithms.4.3.0\System.Security.Cryptography.Algorithms.4.3.0.nupkg" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Encoding.4.3.0\System.Security.Cryptography.Encoding.4.3.0.nupkg" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.Primitives.4.3.0\System.Security.Cryptography.Primitives.4.3.0.nupkg" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\MonoAndroid10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\MonoTouch10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\xamarinios10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\xamarinmac20\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\xamarintvos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\ref\xamarinwatchos10\_._" />
+    <Content Include="packages\System.Security.Cryptography.X509Certificates.4.3.0\System.Security.Cryptography.X509Certificates.4.3.0.nupkg" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\langs\readme.md" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="packages\TinyMCE.4.6.6\content\scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="packages\TinyMCE.4.6.6\TinyMCE.4.6.6.nupkg" />
+    <Content Include="packages\WebGrease.1.1.0\WebGrease.1.1.0.nupkg" />
+    <Content Include="packages\WebGrease.1.6.0\WebGrease.1.6.0.nupkg" />
+    <Content Include="packages\WebMatrix.Data.2.0.30506.0\WebMatrix.Data.2.0.30506.0.nupkg" />
+    <Content Include="packages\WebMatrix.WebData.2.0.30506.0\WebMatrix.WebData.2.0.30506.0.nupkg" />
+    <None Include="Properties\PublishProfiles\newsletter.pubxml" />
+    <None Include="Properties\PublishProfiles\testdata.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\html2canvas.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.dataTables.editable.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.jeditable.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.4.2.debug.js" />
+    <Content Include="Scripts\knockout-3.4.2.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\multi_step_form.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Scripts\tinymce\license.txt" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\css\prism.css" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\css\dialog.css" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\buttons.png" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\icons.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\items.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\menu_arrow.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\menu_check.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\progress.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\tabs.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\editable_selects.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\form_utils.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\mctabs.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\validate.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\help\img\logo.png" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\toc\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Scripts\tinymce\skins\lightgray\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Scripts\tinymce\themes\inlite\theme.js" />
+    <Content Include="Scripts\tinymce\themes\inlite\theme.min.js" />
+    <Content Include="Scripts\tinymce\themes\modern\theme.js" />
+    <Content Include="Scripts\tinymce\themes\modern\theme.min.js" />
+    <Content Include="Scripts\tinymce\tinymce.js" />
+    <Content Include="Scripts\tinymce\tinymce.min.js" />
+    <Content Include="Scripts\validate.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\NewLetter\Error.cshtml" />
+    <Content Include="Views\NewLetter\CareerObjective.cshtml" />
+    <None Include="Views\NewLetter\thankyou.cshtml" />
+    <Content Include="Views\NewLetter\Introduction.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\NewLetter\PersonalInfo.cshtml" />
+    <Content Include="Views\NewLetter\AcademicInfo.cshtml" />
+    <Content Include="Views\NewLetter\PhdInfo_.cshtml" />
+    <Content Include="Views\NewLetter\EmplomentInfo.cshtml" />
+    <Content Include="Views\NewLetter\RefrenceInfo.cshtml" />
+    <Content Include="Views\NewLetter\_PartialPopUpEmployment.cshtml" />
+    <Content Include="Views\NewLetter\_partialAddCertifications.cshtml" />
+    <Content Include="Views\NewLetter\certifications.cshtml" />
+    <Content Include="Views\NewLetter\skills.cshtml" />
+    <Content Include="Views\NewLetter\_partialAddSkills.cshtml" />
+    <Content Include="Views\Shared\_partialResultView.cshtml" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Scripts\tinymce\langs\readme.md" />
+    <Content Include="Views\NewLetter\_partialHighSchool.cshtml" />
+    <Content Include="Views\NewLetter\_partialHigherSchool.cshtml" />
+    <Content Include="Views\NewLetter\_partialGraduation.cshtml" />
+    <Content Include="Views\NewLetter\_partialPostGraduation.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51126/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

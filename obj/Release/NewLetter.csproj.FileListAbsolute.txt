@@ -1,0 +1,66 @@
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\NewLetter.dll.config
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\NewLetter.dll
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\NewLetter.pdb
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Net.Http.Formatting.dll
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.Http.dll
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.Http.WebHost.dll
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\EntityFramework.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\Newtonsoft.Json.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.Mvc.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.Razor.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.WebPages.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.WebPages.Deployment.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\bin\System.Web.WebPages.Razor.xml
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\obj\Release\NewLetter.csprojResolveAssemblyReference.cache
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\obj\Release\NewLetter.dll
+F:\Project Templates\NewsLetter Pdf Export With Styles\NewsLetter Pdf Export With Styles\obj\Release\NewLetter.pdb
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\NewLetter.dll.config
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\NewLetter.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\NewLetter.pdb
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\Microsoft.Web.Infrastructure.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\Newtonsoft.Json.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Net.Http.Formatting.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.WebHost.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Mvc.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Razor.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Deployment.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Razor.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\Microsoft.Web.Infrastructure.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Net.Http.Formatting.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Http.WebHost.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Mvc.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.Razor.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Deployment.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\bin\System.Web.WebPages.Razor.xml
+D:\NewsLetter Pdf Export With Styles\NewsLetter\obj\Release\NewLetter.csprojResolveAssemblyReference.cache
+D:\NewsLetter Pdf Export With Styles\NewsLetter\obj\Release\NewLetter.dll
+D:\NewsLetter Pdf Export With Styles\NewsLetter\obj\Release\NewLetter.pdb
+D:\Integration\NewsLetter\bin\NewLetter.dll.config
+D:\Integration\NewsLetter\bin\NewLetter.dll
+D:\Integration\NewsLetter\bin\NewLetter.pdb
+D:\Integration\NewsLetter\bin\HtmlRenderer.dll
+D:\Integration\NewsLetter\bin\HtmlRenderer.PdfSharp.dll
+D:\Integration\NewsLetter\bin\Microsoft.Web.Helpers.dll
+D:\Integration\NewsLetter\bin\PdfSharp.Charting.dll
+D:\Integration\NewsLetter\bin\PdfSharp.dll
+D:\Integration\NewsLetter\bin\System.Net.Http.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.Algorithms.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.Encoding.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.Primitives.dll
+D:\Integration\NewsLetter\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Integration\NewsLetter\bin\HtmlRenderer.pdb
+D:\Integration\NewsLetter\bin\HtmlRenderer.PdfSharp.pdb
+D:\Integration\NewsLetter\bin\PdfSharp.xml
+D:\Integration\NewsLetter\bin\PdfSharp.Charting.xml
+D:\Integration\NewsLetter\bin\de\PdfSharp.resources.dll
+D:\Integration\NewsLetter\bin\de\PdfSharp.Charting.resources.dll
+D:\Integration\NewsLetter\obj\Release\NewLetter.csproj.App.config
+D:\Integration\NewsLetter\obj\Release\NewLetter.csprojResolveAssemblyReference.cache
+D:\Integration\NewsLetter\obj\Release\NewLetter.dll
+D:\Integration\NewsLetter\obj\Release\NewLetter.pdb
+D:\Integration\NewsLetter\bin\System.Net.Http.Formatting.dll
+D:\Integration\NewsLetter\bin\System.Net.Http.Formatting.xml

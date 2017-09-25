@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="oriondbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="advertisementList">
+    <Key>
+      <PropertyRef Name="advertisementRefID" />
+    </Key>
+    <Property Name="advertisementRefID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empID" Type="bigint" Nullable="false" />
+    <Property Name="advertisementimageURL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="advertisementRefstatus" Type="bit" Nullable="false" />
+    <Property Name="advertisementURL" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="app_error_log">
+    <Key>
+      <PropertyRef Name="error_log_id" />
+    </Key>
+    <Property Name="error_log_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="error_message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="user_id" Type="int" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+    <Property Name="ApplicationName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="App_status">
+    <Key>
+      <PropertyRef Name="App_status_id" />
+    </Key>
+    <Property Name="App_status_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Candidate_status">
+    <Key>
+      <PropertyRef Name="Candidate_status" />
+    </Key>
+    <Property Name="Candidate_status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="city">
+    <Key>
+      <PropertyRef Name="cityID" />
+    </Key>
+    <Property Name="cityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="zipCode" Type="varchar" MaxLength="10" />
+    <Property Name="latitude" Type="varchar" MaxLength="50" />
+    <Property Name="longitude" Type="varchar" MaxLength="50" />
+    <Property Name="stateID" Type="int" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="companyDetails">
+    <Key>
+      <PropertyRef Name="companyID" />
+    </Key>
+    <Property Name="companyID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="companyName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="cityID" Type="int" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="website" Type="varchar(max)" />
+    <Property Name="companyIndustry" Type="int" Nullable="false" />
+    <Property Name="companyDescription" Type="varchar(max)" Nullable="false" />
+    <Property Name="gstNo" Type="varchar" MaxLength="500" />
+    <Property Name="tinNo" Type="varchar" MaxLength="500" />
+    <Property Name="ctsNo" Type="varchar" MaxLength="500" />
+    <Property Name="logo" Type="varchar(max)" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="modifiedBy" Type="bigint" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="employerTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Country" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="currency">
+    <Key>
+      <PropertyRef Name="currencyID" />
+    </Key>
+    <Property Name="currencyID" Type="int" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="EducationID" />
+    </Key>
+    <Property Name="EducationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="educationName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployerDetails">
+    <Key>
+      <PropertyRef Name="EmployerID" />
+    </Key>
+    <Property Name="EmployerID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+    <Property Name="companyID" Type="bigint" Nullable="false" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="employerType">
+    <Key>
+      <PropertyRef Name="employerTypeID" />
+    </Key>
+    <Property Name="employerTypeID" Type="int" Nullable="false" />
+    <Property Name="employerType" Type="varchar" MaxLength="100" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmploymentType">
+    <Key>
+      <PropertyRef Name="EmploymentTypeID" />
+    </Key>
+    <Property Name="EmploymentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmploymentType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="finalQendidateList">
+    <Key>
+      <PropertyRef Name="finalCandidateID" />
+    </Key>
+    <Property Name="finalCandidateID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="candidateSalary" Type="nvarchar" MaxLength="50" />
+    <Property Name="candidatePosition" Type="nvarchar" MaxLength="200" />
+    <Property Name="expectedJoiningDate" Type="datetime" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="genderList">
+    <Key>
+      <PropertyRef Name="genderID" />
+    </Key>
+    <Property Name="genderID" Type="int" Nullable="false" />
+    <Property Name="genderName" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HiredCandidate">
+    <Key>
+      <PropertyRef Name="hiredID" />
+    </Key>
+    <Property Name="hiredID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="EmployerID" Type="bigint" Nullable="false" />
+    <Property Name="joinningDate" Type="date" Nullable="false" />
+    <Property Name="ExpectedSalaryMonthly" Type="int" Nullable="false" />
+    <Property Name="ExpectedSalaryGross" Type="int" Nullable="false" />
+    <Property Name="Designtion" Type="varchar" MaxLength="50" />
+    <Property Name="SpecialComment" Type="text" />
+  </EntityType>
+  <EntityType Name="industry">
+    <Key>
+      <PropertyRef Name="industryID" />
+    </Key>
+    <Property Name="industryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="industryName" Type="varchar" MaxLength="100" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InterViewerComment">
+    <Key>
+      <PropertyRef Name="commentID" />
+    </Key>
+    <Property Name="commentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="EmployerID" Type="bigint" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="100" />
+    <Property Name="Comment" Type="text" Nullable="false" />
+    <Property Name="Candidate_status" Type="int" Nullable="false" />
+    <Property Name="ExpectedSalaryMonthly" Type="int" Nullable="false" />
+    <Property Name="ExpectedSalaryGross" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jobDetails">
+    <Key>
+      <PropertyRef Name="jobID" />
+    </Key>
+    <Property Name="jobID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobTitle" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="jobDescription" Type="text" Nullable="false" />
+    <Property Name="workExpMin" Type="int" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="unit" Type="varchar" MaxLength="100" />
+    <Property Name="industryID" Type="int" Nullable="false" />
+    <Property Name="cityID" Type="int" Nullable="false" />
+    <Property Name="EmploymentTypeID" Type="int" Nullable="false" />
+    <Property Name="EducationReq" Type="varchar" MaxLength="500" />
+    <Property Name="NoOfOpenings" Type="int" Nullable="false" />
+    <Property Name="createdBy" Type="bigint" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="modifiedBy" Type="bigint" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="jobStatusID" Type="int" Nullable="false" />
+    <Property Name="jobContactPersonName" Type="varchar" MaxLength="500" />
+    <Property Name="jobContactPersonMobile" Type="varchar" MaxLength="50" />
+    <Property Name="jobContactPersonEmail" Type="varchar" MaxLength="100" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="500" />
+    <Property Name="CompanyDescription" Type="varchar" MaxLength="1000" />
+    <Property Name="CompanyWebsite" Type="varchar" MaxLength="1000" />
+    <Property Name="responsesEmailID" Type="varchar" MaxLength="100" />
+    <Property Name="CompanyLogo" Type="varchar" MaxLength="1000" />
+    <Property Name="compeletPosted" Type="bit" Nullable="false" />
+    <Property Name="salaryVisibleToEmployee" Type="bit" Nullable="false" />
+    <Property Name="otherinformation" Type="text" />
+    <Property Name="companyID" Type="bigint" Nullable="false" />
+    <Property Name="gender" Type="varchar" MaxLength="6" />
+    <Property Name="advertisementRefID" Type="bigint" />
+    <Property Name="jobURL" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="jobSavedQendidate">
+    <Key>
+      <PropertyRef Name="jobSavedID" />
+    </Key>
+    <Property Name="jobSavedID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="jobSavedDateTime" Type="datetime" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="jobSkills">
+    <Key>
+      <PropertyRef Name="jobSkillsID" />
+    </Key>
+    <Property Name="jobSkillsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="skillsID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jobStatus">
+    <Key>
+      <PropertyRef Name="jobStatusID" />
+    </Key>
+    <Property Name="jobStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="statuts" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProfilePerformance">
+    <Key>
+      <PropertyRef Name="performanceID" />
+    </Key>
+    <Property Name="performanceID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="EmployerID" Type="bigint" Nullable="false" />
+    <Property Name="ViewedDate" Type="date" />
+    <Property Name="Downloaded" Type="date" />
+    <Property Name="Contacted" Type="date" />
+    <Property Name="dataIsCreated" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qenAppliedJob">
+    <Key>
+      <PropertyRef Name="AppliedJobID" />
+    </Key>
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="appliedDate" Type="datetime" Nullable="false" />
+    <Property Name="AppliedJobID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+    <Property Name="App_status_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qendidateGraduation">
+    <Key>
+      <PropertyRef Name="gradid" />
+    </Key>
+    <Property Name="gradid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="collegeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="collegeUniversity" Type="nvarchar" MaxLength="100" />
+    <Property Name="courseName" Type="varchar" MaxLength="100" />
+    <Property Name="courseField" Type="nvarchar" MaxLength="50" />
+    <Property Name="gradPercentage" Type="float" />
+    <Property Name="subjects" Type="nvarchar" MaxLength="40" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="YearPassing" Type="int" />
+  </EntityType>
+  <EntityType Name="qendidateList">
+    <Key>
+      <PropertyRef Name="qenID" />
+    </Key>
+    <Property Name="qenID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenName" Type="nvarchar" MaxLength="50" />
+    <Property Name="qenAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="qenCityID" Type="int" Nullable="false" />
+    <Property Name="qenEmail" Type="nvarchar" MaxLength="320" />
+    <Property Name="qenLinkdInUrl" Type="nvarchar" MaxLength="320" />
+    <Property Name="qenPhone" Type="bigint" />
+    <Property Name="qenNationality" Type="nvarchar" MaxLength="30" />
+    <Property Name="qenPassport" Type="nvarchar" MaxLength="20" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="isDelete" Type="bit" Nullable="false" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="qenResume" Type="varchar(max)" />
+    <Property Name="qenCoverLetter" Type="text" />
+    <Property Name="IsReferenceCleared" Type="bit" />
+    <Property Name="qenImage" Type="varchar(max)" />
+    <Property Name="genderID" Type="int" />
+    <Property Name="CareerObjective" Type="text" />
+  </EntityType>
+  <EntityType Name="qendidateListInJob">
+    <Key>
+      <PropertyRef Name="qendidateListID" />
+    </Key>
+    <Property Name="qendidateListID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="category" Type="int" />
+    <Property Name="SelfApplied" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qendidatePGraduation">
+    <Key>
+      <PropertyRef Name="pggradid" />
+    </Key>
+    <Property Name="pggradid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="collegeName" Type="nvarchar" MaxLength="500" />
+    <Property Name="collegeUniversity" Type="nvarchar" MaxLength="200" />
+    <Property Name="courseName" Type="nvarchar" MaxLength="500" />
+    <Property Name="courseField" Type="nvarchar" MaxLength="30" />
+    <Property Name="pGradPercentage" Type="float" />
+    <Property Name="subjects" Type="nvarchar" MaxLength="500" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="YearPassing" Type="int" />
+  </EntityType>
+  <EntityType Name="qendidatePHD">
+    <Key>
+      <PropertyRef Name="phdid" />
+    </Key>
+    <Property Name="phdid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="collegeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="collegeUniversity" Type="nvarchar" MaxLength="100" />
+    <Property Name="phdTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="courseField" Type="nvarchar" MaxLength="500" />
+    <Property Name="phdRemarks" Type="varchar" MaxLength="200" />
+    <Property Name="phdStart" Type="varchar" MaxLength="50" />
+    <Property Name="phdEnd" Type="varchar" MaxLength="50" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="qendidateProfileSharedWith">
+    <Key>
+      <PropertyRef Name="profileSharedID" />
+    </Key>
+    <Property Name="profileSharedID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="sharedWithEmailAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="sharedDateTime" Type="datetime" />
+    <Property Name="datatIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="qendidateSavedForReference">
+    <Key>
+      <PropertyRef Name="qendidateSavedID" />
+    </Key>
+    <Property Name="qendidateSavedID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="savedDateTime" Type="datetime" />
+    <Property Name="dateIsCreated" Type="datetime" />
+    <Property Name="dataIsCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="qendidateTestSchedule">
+    <Key>
+      <PropertyRef Name="mailSendID" />
+    </Key>
+    <Property Name="mailSendID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="mailSentTestScheduled" Type="bit" Nullable="false" />
+    <Property Name="mailReceivedscheduled" Type="bit" Nullable="false" />
+    <Property Name="testScheduledDateTime" Type="datetime" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+    <Property Name="ReasonReschedule" Type="varchar" MaxLength="100" />
+    <Property Name="testScheduleCountInt" Type="int" Nullable="false" />
+    <Property Name="questionPaperID" Type="bigint" />
+    <Property Name="questionPaperSentDateTime" Type="datetime" />
+    <Property Name="examAttemptedDateTime" Type="datetime" />
+    <Property Name="examSubmittedDateTime" Type="datetime" />
+    <Property Name="examMarks" Type="int" Nullable="false" />
+    <Property Name="isExamAttempted" Type="bit" Nullable="false" />
+    <Property Name="isExamSubmitted" Type="bit" Nullable="false" />
+    <Property Name="IsMeetScheduled" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qenEmpDetails">
+    <Key>
+      <PropertyRef Name="qenEmploymentNum" />
+    </Key>
+    <Property Name="qenEmploymentNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="qenEmpFrom" Type="varchar" MaxLength="50" />
+    <Property Name="jobDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="qenEmpTo" Type="varchar" MaxLength="50" />
+    <Property Name="qenSalary" Type="float" />
+    <Property Name="qenPosition" Type="varchar" MaxLength="50" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="qenRoleInProject" Type="varchar" MaxLength="500" />
+    <Property Name="teamSize" Type="int" />
+    <Property Name="jobLocation" Type="varchar" MaxLength="100" />
+    <Property Name="isPresent" Type="bit" />
+    <Property Name="projectDescription" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="qenHigherSecondary">
+    <Key>
+      <PropertyRef Name="hsecid" />
+    </Key>
+    <Property Name="hsecid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="schoolName" Type="varchar" MaxLength="40" />
+    <Property Name="hSecondaryPassYear" Type="int" />
+    <Property Name="hSecondaryPercentage" Type="float" />
+    <Property Name="hSecondaryBoard" Type="nvarchar" MaxLength="50" />
+    <Property Name="hSecondarySubjects" Type="nvarchar" MaxLength="100" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="qenInterviewSchedule">
+    <Key>
+      <PropertyRef Name="meetID" />
+    </Key>
+    <Property Name="meetID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="meetScheduledMailSent" Type="bit" Nullable="false" />
+    <Property Name="meetMailSentDateTime" Type="datetime" Nullable="false" />
+    <Property Name="meetMailRepliedDateTime" Type="datetime" Nullable="false" />
+    <Property Name="meetScheduledDateTime" Type="datetime" />
+    <Property Name="meetPreferredMedium" Type="varchar" MaxLength="50" />
+    <Property Name="reScheduled" Type="int" Nullable="false" />
+    <Property Name="reasonReScheduled" Type="varchar" MaxLength="5000" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="meetScheduledMailRecieved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qenMialSendInterested">
+    <Key>
+      <PropertyRef Name="qenMialSendInterestedID" />
+    </Key>
+    <Property Name="qenMialSendInterestedID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobID" Type="bigint" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="mailSentjobChancgeInterested" Type="bit" Nullable="false" />
+    <Property Name="mailSentDateTime" Type="datetime" Nullable="false" />
+    <Property Name="mailReceivedjobChancgeInterested" Type="bit" Nullable="false" />
+    <Property Name="mailReceivedDatetime" Type="datetime" Nullable="false" />
+    <Property Name="dataIsCreated" Type="datetime" Nullable="false" />
+    <Property Name="dataIsUpdated" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qenReference">
+    <Key>
+      <PropertyRef Name="qenID" />
+      <PropertyRef Name="qenRefID" />
+    </Key>
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="qenRefID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenRefName" Type="nvarchar" MaxLength="50" />
+    <Property Name="qenRefCompany" Type="nvarchar" MaxLength="50" />
+    <Property Name="qenRefPhone" Type="float" />
+    <Property Name="qenRefEmail" Type="nvarchar" MaxLength="320" />
+    <Property Name="qenRefPosition" Type="nvarchar" MaxLength="40" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="qenResume">
+    <Key>
+      <PropertyRef Name="qenID" />
+      <PropertyRef Name="qenResumeID" />
+    </Key>
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="qenResumeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenResumeName" Type="nvarchar" MaxLength="40" />
+    <Property Name="qenResume" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="qenSecondary">
+    <Key>
+      <PropertyRef Name="qenSecondary" />
+    </Key>
+    <Property Name="qenSecondary" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="schoolName" Type="varchar" MaxLength="40" />
+    <Property Name="secondaryPassYear" Type="int" />
+    <Property Name="secondaryPercentage" Type="float" />
+    <Property Name="secondaryBoard" Type="nvarchar" MaxLength="20" />
+    <Property Name="dataIsCreated" Type="datetime" />
+    <Property Name="dataIsUpdated" Type="datetime" />
+    <Property Name="secondarySubjects" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="qenSkills">
+    <Key>
+      <PropertyRef Name="qenSkillsID" />
+    </Key>
+    <Property Name="qenSkillsID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qenID" Type="bigint" Nullable="false" />
+    <Property Name="skillsID" Type="int" Nullable="false" />
+    <Property Name="yearOfExp" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="role_action">
+    <Key>
+      <PropertyRef Name="role_action_id" />
+    </Key>
+    <Property Name="role_action_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role_id" Type="int" Nullable="false" />
+    <Property Name="controller_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="action_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="salaryUnit">
+    <Key>
+      <PropertyRef Name="unitID" />
+    </Key>
+    <Property Name="unitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unit" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="skills">
+    <Key>
+      <PropertyRef Name="skillsID" />
+    </Key>
+    <Property Name="skillsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="skillName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="state">
+    <Key>
+      <PropertyRef Name="stateID" />
+    </Key>
+    <Property Name="stateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stateName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CountryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__qendidate__qenID__0EA330E9">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidateGraduation" Type="Self.qendidateGraduation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidateGraduation">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__qendidate__qenID__267ABA7A">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidatePGraduation" Type="Self.qendidatePGraduation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidatePGraduation">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__qendidate__qenID__286302EC">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidatePHD" Type="Self.qendidatePHD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidatePHD">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__qenHigher__qenID__1273C1CD">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenHigherSecondary" Type="Self.qenHigherSecondary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenHigherSecondary">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__qenRefere__qenID__1367E606">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenReference" Type="Self.qenReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenReference">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__qenResume__qenID__145C0A3F">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenResume" Type="Self.qenResume" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenResume">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__qenSecond__qenID__15502E78">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenSecondary" Type="Self.qenSecondary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenSecondary">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_companyDetails_city">
+    <End Role="city" Type="Self.city" Multiplicity="1" />
+    <End Role="companyDetails" Type="Self.companyDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="cityID" />
+      </Principal>
+      <Dependent Role="companyDetails">
+        <PropertyRef Name="cityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_companyDetails_employerType">
+    <End Role="employerType" Type="Self.employerType" Multiplicity="1" />
+    <End Role="companyDetails" Type="Self.companyDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="employerType">
+        <PropertyRef Name="employerTypeID" />
+      </Principal>
+      <Dependent Role="companyDetails">
+        <PropertyRef Name="employerTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_companyDetails_industry">
+    <End Role="industry" Type="Self.industry" Multiplicity="1" />
+    <End Role="companyDetails" Type="Self.companyDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="industry">
+        <PropertyRef Name="industryID" />
+      </Principal>
+      <Dependent Role="companyDetails">
+        <PropertyRef Name="companyIndustry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployerDetails_companyDetails">
+    <End Role="companyDetails" Type="Self.companyDetails" Multiplicity="1" />
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="companyDetails">
+        <PropertyRef Name="companyID" />
+      </Principal>
+      <Dependent Role="EmployerDetails">
+        <PropertyRef Name="companyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployerDetails_EmployerDetails">
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="1" />
+    <End Role="EmployerDetails1" Type="Self.EmployerDetails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerDetails">
+        <PropertyRef Name="EmployerID" />
+      </Principal>
+      <Dependent Role="EmployerDetails1">
+        <PropertyRef Name="EmployerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_finalQendidateList_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="finalQendidateList" Type="Self.finalQendidateList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="finalQendidateList">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HiredCandidate_EmployerDetails">
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="1" />
+    <End Role="HiredCandidate" Type="Self.HiredCandidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerDetails">
+        <PropertyRef Name="EmployerID" />
+      </Principal>
+      <Dependent Role="HiredCandidate">
+        <PropertyRef Name="EmployerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HiredCandidate_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="HiredCandidate" Type="Self.HiredCandidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="HiredCandidate">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HiredCandidate_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="HiredCandidate" Type="Self.HiredCandidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="HiredCandidate">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterViewerComment_Candidate_status">
+    <End Role="Candidate_status" Type="Self.Candidate_status" Multiplicity="1" />
+    <End Role="InterViewerComment" Type="Self.InterViewerComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidate_status">
+        <PropertyRef Name="Candidate_status" />
+      </Principal>
+      <Dependent Role="InterViewerComment">
+        <PropertyRef Name="Candidate_status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterViewerComment_EmployerDetails">
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="1" />
+    <End Role="InterViewerComment" Type="Self.InterViewerComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerDetails">
+        <PropertyRef Name="EmployerID" />
+      </Principal>
+      <Dependent Role="InterViewerComment">
+        <PropertyRef Name="EmployerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterViewerComment_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="InterViewerComment" Type="Self.InterViewerComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="InterViewerComment">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InterViewerComment_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="InterViewerComment" Type="Self.InterViewerComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="InterViewerComment">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_city">
+    <End Role="city" Type="Self.city" Multiplicity="1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="cityID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="cityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_EmployeModified">
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="0..1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerDetails">
+        <PropertyRef Name="EmployerID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="modifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_EmployerDetails">
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerDetails">
+        <PropertyRef Name="EmployerID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="createdBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_EmploymentType">
+    <End Role="EmploymentType" Type="Self.EmploymentType" Multiplicity="1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmploymentType">
+        <PropertyRef Name="EmploymentTypeID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="EmploymentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_industry">
+    <End Role="industry" Type="Self.industry" Multiplicity="1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="industry">
+        <PropertyRef Name="industryID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="industryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_jobDetails">
+    <End Role="companyDetails" Type="Self.companyDetails" Multiplicity="1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="companyDetails">
+        <PropertyRef Name="companyID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="companyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_jobDetails1">
+    <End Role="advertisementList" Type="Self.advertisementList" Multiplicity="0..1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="advertisementList">
+        <PropertyRef Name="advertisementRefID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="advertisementRefID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobDetails_jobStatus">
+    <End Role="jobStatus" Type="Self.jobStatus" Multiplicity="1" />
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobStatus">
+        <PropertyRef Name="jobStatusID" />
+      </Principal>
+      <Dependent Role="jobDetails">
+        <PropertyRef Name="jobStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobSavedQendidate_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="jobSavedQendidate" Type="Self.jobSavedQendidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="jobSavedQendidate">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobSavedQendidate_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="jobSavedQendidate" Type="Self.jobSavedQendidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="jobSavedQendidate">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobSkills_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="jobSkills" Type="Self.jobSkills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="jobSkills">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jobSkills_skills">
+    <End Role="skills" Type="Self.skills" Multiplicity="1" />
+    <End Role="jobSkills" Type="Self.jobSkills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="skills">
+        <PropertyRef Name="skillsID" />
+      </Principal>
+      <Dependent Role="jobSkills">
+        <PropertyRef Name="skillsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfilePerformance_EmployerDetails">
+    <End Role="EmployerDetails" Type="Self.EmployerDetails" Multiplicity="1" />
+    <End Role="ProfilePerformance" Type="Self.ProfilePerformance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmployerDetails">
+        <PropertyRef Name="EmployerID" />
+      </Principal>
+      <Dependent Role="ProfilePerformance">
+        <PropertyRef Name="EmployerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfilePerformance_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="ProfilePerformance" Type="Self.ProfilePerformance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="ProfilePerformance">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenAppliedJob_App_status">
+    <End Role="App_status" Type="Self.App_status" Multiplicity="1" />
+    <End Role="qenAppliedJob" Type="Self.qenAppliedJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="App_status">
+        <PropertyRef Name="App_status_id" />
+      </Principal>
+      <Dependent Role="qenAppliedJob">
+        <PropertyRef Name="App_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenAppliedJob_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="qenAppliedJob" Type="Self.qenAppliedJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="qenAppliedJob">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenAppliedJob_qenAppliedJob">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenAppliedJob" Type="Self.qenAppliedJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenAppliedJob">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenCityID_CityID">
+    <End Role="city" Type="Self.city" Multiplicity="1" />
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="city">
+        <PropertyRef Name="cityID" />
+      </Principal>
+      <Dependent Role="qendidateList">
+        <PropertyRef Name="qenCityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateList_genderList">
+    <End Role="genderList" Type="Self.genderList" Multiplicity="0..1" />
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genderList">
+        <PropertyRef Name="genderID" />
+      </Principal>
+      <Dependent Role="qendidateList">
+        <PropertyRef Name="genderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateListInJob_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="qendidateListInJob" Type="Self.qendidateListInJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="qendidateListInJob">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateListInJob_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidateListInJob" Type="Self.qendidateListInJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidateListInJob">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateProfileSharedWith_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidateProfileSharedWith" Type="Self.qendidateProfileSharedWith" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidateProfileSharedWith">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateSavedForReference_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="qendidateSavedForReference" Type="Self.qendidateSavedForReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="qendidateSavedForReference">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateSavedForReference_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidateSavedForReference" Type="Self.qendidateSavedForReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidateSavedForReference">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateTestSchedule_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="qendidateTestSchedule" Type="Self.qendidateTestSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="qendidateTestSchedule">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qendidateTestSchedule_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qendidateTestSchedule" Type="Self.qendidateTestSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qendidateTestSchedule">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenEmpDetails_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenEmpDetails" Type="Self.qenEmpDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenEmpDetails">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenInterviewSchedule_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="qenInterviewSchedule" Type="Self.qenInterviewSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="qenInterviewSchedule">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenInterviewSchedule_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenInterviewSchedule" Type="Self.qenInterviewSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenInterviewSchedule">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenMialSendInterested_jobDetails">
+    <End Role="jobDetails" Type="Self.jobDetails" Multiplicity="1" />
+    <End Role="qenMialSendInterested" Type="Self.qenMialSendInterested" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobDetails">
+        <PropertyRef Name="jobID" />
+      </Principal>
+      <Dependent Role="qenMialSendInterested">
+        <PropertyRef Name="jobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenMialSendInterested_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenMialSendInterested" Type="Self.qenMialSendInterested" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenMialSendInterested">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenSkills_qendidateList">
+    <End Role="qendidateList" Type="Self.qendidateList" Multiplicity="1" />
+    <End Role="qenSkills" Type="Self.qenSkills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="qendidateList">
+        <PropertyRef Name="qenID" />
+      </Principal>
+      <Dependent Role="qenSkills">
+        <PropertyRef Name="qenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_qenSkills_skills">
+    <End Role="skills" Type="Self.skills" Multiplicity="1" />
+    <End Role="qenSkills" Type="Self.qenSkills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="skills">
+        <PropertyRef Name="skillsID" />
+      </Principal>
+      <Dependent Role="qenSkills">
+        <PropertyRef Name="skillsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_role_action_role">
+    <End Role="role" Type="Self.role" Multiplicity="1" />
+    <End Role="role_action" Type="Self.role_action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="role_action">
+        <PropertyRef Name="role_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_state_country">
+    <End Role="country" Type="Self.country" Multiplicity="1" />
+    <End Role="state" Type="Self.state" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="state">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="oriondbModelStoreContainer">
+    <EntitySet Name="advertisementList" EntityType="Self.advertisementList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="app_error_log" EntityType="Self.app_error_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="App_status" EntityType="Self.App_status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate_status" EntityType="Self.Candidate_status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="city" EntityType="Self.city" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="companyDetails" EntityType="Self.companyDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="currency" EntityType="Self.currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployerDetails" EntityType="Self.EmployerDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employerType" EntityType="Self.employerType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmploymentType" EntityType="Self.EmploymentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="finalQendidateList" EntityType="Self.finalQendidateList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="genderList" EntityType="Self.genderList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HiredCandidate" EntityType="Self.HiredCandidate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="industry" EntityType="Self.industry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InterViewerComment" EntityType="Self.InterViewerComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="jobDetails" EntityType="Self.jobDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="jobSavedQendidate" EntityType="Self.jobSavedQendidate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="jobSkills" EntityType="Self.jobSkills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="jobStatus" EntityType="Self.jobStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfilePerformance" EntityType="Self.ProfilePerformance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenAppliedJob" EntityType="Self.qenAppliedJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidateGraduation" EntityType="Self.qendidateGraduation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidateList" EntityType="Self.qendidateList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidateListInJob" EntityType="Self.qendidateListInJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidatePGraduation" EntityType="Self.qendidatePGraduation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidatePHD" EntityType="Self.qendidatePHD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidateProfileSharedWith" EntityType="Self.qendidateProfileSharedWith" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidateSavedForReference" EntityType="Self.qendidateSavedForReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qendidateTestSchedule" EntityType="Self.qendidateTestSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenEmpDetails" EntityType="Self.qenEmpDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenHigherSecondary" EntityType="Self.qenHigherSecondary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenInterviewSchedule" EntityType="Self.qenInterviewSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenMialSendInterested" EntityType="Self.qenMialSendInterested" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenReference" EntityType="Self.qenReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenResume" EntityType="Self.qenResume" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenSecondary" EntityType="Self.qenSecondary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qenSkills" EntityType="Self.qenSkills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="role_action" EntityType="Self.role_action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="salaryUnit" EntityType="Self.salaryUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="skills" EntityType="Self.skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="state" EntityType="Self.state" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__qendidate__qenID__0EA330E9" Association="Self.FK__qendidate__qenID__0EA330E9">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidateGraduation" EntitySet="qendidateGraduation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__qendidate__qenID__267ABA7A" Association="Self.FK__qendidate__qenID__267ABA7A">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidatePGraduation" EntitySet="qendidatePGraduation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__qendidate__qenID__286302EC" Association="Self.FK__qendidate__qenID__286302EC">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidatePHD" EntitySet="qendidatePHD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__qenHigher__qenID__1273C1CD" Association="Self.FK__qenHigher__qenID__1273C1CD">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenHigherSecondary" EntitySet="qenHigherSecondary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__qenRefere__qenID__1367E606" Association="Self.FK__qenRefere__qenID__1367E606">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenReference" EntitySet="qenReference" />
+    </AssociationSet>
+    <AssociationSet Name="FK__qenResume__qenID__145C0A3F" Association="Self.FK__qenResume__qenID__145C0A3F">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenResume" EntitySet="qenResume" />
+    </AssociationSet>
+    <AssociationSet Name="FK__qenSecond__qenID__15502E78" Association="Self.FK__qenSecond__qenID__15502E78">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenSecondary" EntitySet="qenSecondary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_companyDetails_city" Association="Self.FK_companyDetails_city">
+      <End Role="city" EntitySet="city" />
+      <End Role="companyDetails" EntitySet="companyDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_companyDetails_employerType" Association="Self.FK_companyDetails_employerType">
+      <End Role="employerType" EntitySet="employerType" />
+      <End Role="companyDetails" EntitySet="companyDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_companyDetails_industry" Association="Self.FK_companyDetails_industry">
+      <End Role="industry" EntitySet="industry" />
+      <End Role="companyDetails" EntitySet="companyDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployerDetails_companyDetails" Association="Self.FK_EmployerDetails_companyDetails">
+      <End Role="companyDetails" EntitySet="companyDetails" />
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployerDetails_EmployerDetails" Association="Self.FK_EmployerDetails_EmployerDetails">
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+      <End Role="EmployerDetails1" EntitySet="EmployerDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_finalQendidateList_qendidateList" Association="Self.FK_finalQendidateList_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="finalQendidateList" EntitySet="finalQendidateList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HiredCandidate_EmployerDetails" Association="Self.FK_HiredCandidate_EmployerDetails">
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+      <End Role="HiredCandidate" EntitySet="HiredCandidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HiredCandidate_jobDetails" Association="Self.FK_HiredCandidate_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="HiredCandidate" EntitySet="HiredCandidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HiredCandidate_qendidateList" Association="Self.FK_HiredCandidate_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="HiredCandidate" EntitySet="HiredCandidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterViewerComment_Candidate_status" Association="Self.FK_InterViewerComment_Candidate_status">
+      <End Role="Candidate_status" EntitySet="Candidate_status" />
+      <End Role="InterViewerComment" EntitySet="InterViewerComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterViewerComment_EmployerDetails" Association="Self.FK_InterViewerComment_EmployerDetails">
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+      <End Role="InterViewerComment" EntitySet="InterViewerComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterViewerComment_jobDetails" Association="Self.FK_InterViewerComment_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="InterViewerComment" EntitySet="InterViewerComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InterViewerComment_qendidateList" Association="Self.FK_InterViewerComment_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="InterViewerComment" EntitySet="InterViewerComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_city" Association="Self.FK_jobDetails_city">
+      <End Role="city" EntitySet="city" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_EmployeModified" Association="Self.FK_jobDetails_EmployeModified">
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_EmployerDetails" Association="Self.FK_jobDetails_EmployerDetails">
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_EmploymentType" Association="Self.FK_jobDetails_EmploymentType">
+      <End Role="EmploymentType" EntitySet="EmploymentType" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_industry" Association="Self.FK_jobDetails_industry">
+      <End Role="industry" EntitySet="industry" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_jobDetails" Association="Self.FK_jobDetails_jobDetails">
+      <End Role="companyDetails" EntitySet="companyDetails" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_jobDetails1" Association="Self.FK_jobDetails_jobDetails1">
+      <End Role="advertisementList" EntitySet="advertisementList" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobDetails_jobStatus" Association="Self.FK_jobDetails_jobStatus">
+      <End Role="jobStatus" EntitySet="jobStatus" />
+      <End Role="jobDetails" EntitySet="jobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobSavedQendidate_jobDetails" Association="Self.FK_jobSavedQendidate_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="jobSavedQendidate" EntitySet="jobSavedQendidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobSavedQendidate_qendidateList" Association="Self.FK_jobSavedQendidate_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="jobSavedQendidate" EntitySet="jobSavedQendidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobSkills_jobDetails" Association="Self.FK_jobSkills_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="jobSkills" EntitySet="jobSkills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jobSkills_skills" Association="Self.FK_jobSkills_skills">
+      <End Role="skills" EntitySet="skills" />
+      <End Role="jobSkills" EntitySet="jobSkills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfilePerformance_EmployerDetails" Association="Self.FK_ProfilePerformance_EmployerDetails">
+      <End Role="EmployerDetails" EntitySet="EmployerDetails" />
+      <End Role="ProfilePerformance" EntitySet="ProfilePerformance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfilePerformance_qendidateList" Association="Self.FK_ProfilePerformance_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="ProfilePerformance" EntitySet="ProfilePerformance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenAppliedJob_App_status" Association="Self.FK_qenAppliedJob_App_status">
+      <End Role="App_status" EntitySet="App_status" />
+      <End Role="qenAppliedJob" EntitySet="qenAppliedJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenAppliedJob_jobDetails" Association="Self.FK_qenAppliedJob_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="qenAppliedJob" EntitySet="qenAppliedJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenAppliedJob_qenAppliedJob" Association="Self.FK_qenAppliedJob_qenAppliedJob">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenAppliedJob" EntitySet="qenAppliedJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenCityID_CityID" Association="Self.FK_qenCityID_CityID">
+      <End Role="city" EntitySet="city" />
+      <End Role="qendidateList" EntitySet="qendidateList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateList_genderList" Association="Self.FK_qendidateList_genderList">
+      <End Role="genderList" EntitySet="genderList" />
+      <End Role="qendidateList" EntitySet="qendidateList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateListInJob_jobDetails" Association="Self.FK_qendidateListInJob_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="qendidateListInJob" EntitySet="qendidateListInJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateListInJob_qendidateList" Association="Self.FK_qendidateListInJob_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidateListInJob" EntitySet="qendidateListInJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateProfileSharedWith_qendidateList" Association="Self.FK_qendidateProfileSharedWith_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidateProfileSharedWith" EntitySet="qendidateProfileSharedWith" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateSavedForReference_jobDetails" Association="Self.FK_qendidateSavedForReference_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="qendidateSavedForReference" EntitySet="qendidateSavedForReference" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateSavedForReference_qendidateList" Association="Self.FK_qendidateSavedForReference_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidateSavedForReference" EntitySet="qendidateSavedForReference" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateTestSchedule_jobDetails" Association="Self.FK_qendidateTestSchedule_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="qendidateTestSchedule" EntitySet="qendidateTestSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qendidateTestSchedule_qendidateList" Association="Self.FK_qendidateTestSchedule_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qendidateTestSchedule" EntitySet="qendidateTestSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenEmpDetails_qendidateList" Association="Self.FK_qenEmpDetails_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenEmpDetails" EntitySet="qenEmpDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenInterviewSchedule_jobDetails" Association="Self.FK_qenInterviewSchedule_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="qenInterviewSchedule" EntitySet="qenInterviewSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenInterviewSchedule_qendidateList" Association="Self.FK_qenInterviewSchedule_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenInterviewSchedule" EntitySet="qenInterviewSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenMialSendInterested_jobDetails" Association="Self.FK_qenMialSendInterested_jobDetails">
+      <End Role="jobDetails" EntitySet="jobDetails" />
+      <End Role="qenMialSendInterested" EntitySet="qenMialSendInterested" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenMialSendInterested_qendidateList" Association="Self.FK_qenMialSendInterested_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenMialSendInterested" EntitySet="qenMialSendInterested" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenSkills_qendidateList" Association="Self.FK_qenSkills_qendidateList">
+      <End Role="qendidateList" EntitySet="qendidateList" />
+      <End Role="qenSkills" EntitySet="qenSkills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_qenSkills_skills" Association="Self.FK_qenSkills_skills">
+      <End Role="skills" EntitySet="skills" />
+      <End Role="qenSkills" EntitySet="qenSkills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_role_action_role" Association="Self.FK_role_action_role">
+      <End Role="role" EntitySet="role" />
+      <End Role="role_action" EntitySet="role_action" />
+    </AssociationSet>
+    <AssociationSet Name="FK_state_country" Association="Self.FK_state_country">
+      <End Role="country" EntitySet="country" />
+      <End Role="state" EntitySet="state" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
