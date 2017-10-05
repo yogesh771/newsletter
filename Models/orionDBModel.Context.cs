@@ -13,10 +13,10 @@ namespace NewLetter.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class oriondbEntities : DbContext
+    public partial class oriondbEntities1 : DbContext
     {
-        public oriondbEntities()
-            : base("name=oriondbEntities")
+        public oriondbEntities1()
+            : base("name=oriondbEntities1")
         {
         }
     
@@ -25,50 +25,17 @@ namespace NewLetter.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<advertisementList> advertisementLists { get; set; }
         public virtual DbSet<app_error_log> app_error_log { get; set; }
-        public virtual DbSet<App_status> App_status { get; set; }
-        public virtual DbSet<Candidate_status> Candidate_status { get; set; }
-        public virtual DbSet<city> cities { get; set; }
-        public virtual DbSet<companyDetail> companyDetails { get; set; }
-        public virtual DbSet<country> countries { get; set; }
-        public virtual DbSet<currency> currencies { get; set; }
-        public virtual DbSet<Education> Educations { get; set; }
-        public virtual DbSet<EmployerDetail> EmployerDetails { get; set; }
-        public virtual DbSet<employerType> employerTypes { get; set; }
-        public virtual DbSet<EmploymentType> EmploymentTypes { get; set; }
-        public virtual DbSet<finalQendidateList> finalQendidateLists { get; set; }
         public virtual DbSet<genderList> genderLists { get; set; }
-        public virtual DbSet<HiredCandidate> HiredCandidates { get; set; }
-        public virtual DbSet<industry> industries { get; set; }
-        public virtual DbSet<InterViewerComment> InterViewerComments { get; set; }
-        public virtual DbSet<jobDetail> jobDetails { get; set; }
-        public virtual DbSet<jobSavedQendidate> jobSavedQendidates { get; set; }
-        public virtual DbSet<jobSkill> jobSkills { get; set; }
-        public virtual DbSet<jobStatu> jobStatus { get; set; }
-        public virtual DbSet<ProfilePerformance> ProfilePerformances { get; set; }
-        public virtual DbSet<qenAppliedJob> qenAppliedJobs { get; set; }
         public virtual DbSet<qendidateGraduation> qendidateGraduations { get; set; }
         public virtual DbSet<qendidateList> qendidateLists { get; set; }
-        public virtual DbSet<qendidateListInJob> qendidateListInJobs { get; set; }
         public virtual DbSet<qendidatePGraduation> qendidatePGraduations { get; set; }
         public virtual DbSet<qendidatePHD> qendidatePHDs { get; set; }
-        public virtual DbSet<qendidateProfileSharedWith> qendidateProfileSharedWiths { get; set; }
-        public virtual DbSet<qendidateSavedForReference> qendidateSavedForReferences { get; set; }
-        public virtual DbSet<qendidateTestSchedule> qendidateTestSchedules { get; set; }
         public virtual DbSet<qenEmpDetail> qenEmpDetails { get; set; }
         public virtual DbSet<qenHigherSecondary> qenHigherSecondaries { get; set; }
-        public virtual DbSet<qenInterviewSchedule> qenInterviewSchedules { get; set; }
-        public virtual DbSet<qenMialSendInterested> qenMialSendInteresteds { get; set; }
         public virtual DbSet<qenReference> qenReferences { get; set; }
-        public virtual DbSet<qenResume> qenResumes { get; set; }
         public virtual DbSet<qenSecondary> qenSecondaries { get; set; }
         public virtual DbSet<qenSkill> qenSkills { get; set; }
-        public virtual DbSet<role> roles { get; set; }
-        public virtual DbSet<role_action> role_action { get; set; }
-        public virtual DbSet<salaryUnit> salaryUnits { get; set; }
         public virtual DbSet<skill> skills { get; set; }
-        public virtual DbSet<state> states { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

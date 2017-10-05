@@ -209,74 +209,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\profilerController.cs" />
     <Compile Include="HelperUtility\AttributeFilterUtility.cs" />
-    <Compile Include="Controllers\NewLetterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\advertisementList.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\app_error_log.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\App_status.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BaseClass.cs" />
     <Compile Include="Models\baseModel.cs" />
-    <Compile Include="Models\Candidate_status.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\city.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\companyDetail.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\country.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\currency.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Education.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EmployerDetail.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\employerType.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EmploymentType.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\finalQendidateList.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\genderList.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\HiredCandidate.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\industry.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\InterViewerComment.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\jobDetail.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\jobSavedQendidate.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\jobSkill.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\jobStatu.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\orionDBModel.Context.cs">
@@ -294,19 +236,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>orionDBModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProfilePerformance.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\qenAppliedJob.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\qendidateGraduation.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\qendidateList.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\qendidateListInJob.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\qendidatePGraduation.cs">
@@ -315,31 +248,13 @@
     <Compile Include="Models\qendidatePHD.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\qendidateProfileSharedWith.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\qendidateSavedForReference.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\qendidateTestSchedule.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\qenEmpDetail.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\qenHigherSecondary.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\qenInterviewSchedule.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\qenMialSendInterested.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\qenReference.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\qenResume.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\qenSecondary.cs">
@@ -349,22 +264,7 @@
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ResumeModel.cs" />
-    <Compile Include="Models\role.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\role_action.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\salaryUnit.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\skill.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\state.cs">
-      <DependentUpon>orionDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>orionDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ValidationClasses.cs" />
@@ -1532,10 +1432,6 @@
     <Content Include="Scripts\tinymce\tinymce.min.js" />
     <Content Include="Scripts\validate.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\NewLetter\Error.cshtml" />
-    <Content Include="Views\NewLetter\CareerObjective.cshtml" />
-    <None Include="Views\NewLetter\thankyou.cshtml" />
-    <Content Include="Views\NewLetter\Introduction.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1549,16 +1445,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\NewLetter\PersonalInfo.cshtml" />
-    <Content Include="Views\NewLetter\AcademicInfo.cshtml" />
-    <Content Include="Views\NewLetter\PhdInfo_.cshtml" />
-    <Content Include="Views\NewLetter\EmplomentInfo.cshtml" />
-    <Content Include="Views\NewLetter\RefrenceInfo.cshtml" />
-    <Content Include="Views\NewLetter\_PartialPopUpEmployment.cshtml" />
-    <Content Include="Views\NewLetter\_partialAddCertifications.cshtml" />
-    <Content Include="Views\NewLetter\certifications.cshtml" />
-    <Content Include="Views\NewLetter\skills.cshtml" />
-    <Content Include="Views\NewLetter\_partialAddSkills.cshtml" />
     <Content Include="Views\Shared\_partialResultView.cshtml" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
@@ -1569,11 +1455,25 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
     <Content Include="Scripts\tinymce\langs\readme.md" />
-    <Content Include="Views\NewLetter\_partialHighSchool.cshtml" />
-    <Content Include="Views\NewLetter\_partialHigherSchool.cshtml" />
-    <Content Include="Views\NewLetter\_partialGraduation.cshtml" />
-    <Content Include="Views\NewLetter\_partialPostGraduation.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\profiler\AcademicInfo.cshtml" />
+    <Content Include="Views\profiler\CareerObjective.cshtml" />
+    <Content Include="Views\profiler\certifications.cshtml" />
+    <Content Include="Views\profiler\EmplomentInfo.cshtml" />
+    <Content Include="Views\profiler\Error.cshtml" />
+    <Content Include="Views\profiler\Introduction.cshtml" />
+    <Content Include="Views\profiler\PersonalInfo.cshtml" />
+    <Content Include="Views\profiler\RefrenceInfo.cshtml" />
+    <Content Include="Views\profiler\ShowAllDetails.cshtml" />
+    <Content Include="Views\profiler\skills.cshtml" />
+    <Content Include="Views\profiler\thankyou.cshtml" />
+    <Content Include="Views\profiler\_partialAddCertifications.cshtml" />
+    <Content Include="Views\profiler\_partialAddSkills.cshtml" />
+    <Content Include="Views\profiler\_partialGraduation.cshtml" />
+    <Content Include="Views\profiler\_partialHigherSchool.cshtml" />
+    <Content Include="Views\profiler\_partialHighSchool.cshtml" />
+    <Content Include="Views\profiler\_PartialPopUpEmployment.cshtml" />
+    <Content Include="Views\profiler\_partialPostGraduation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

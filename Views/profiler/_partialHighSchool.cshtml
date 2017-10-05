@@ -1,6 +1,6 @@
 ﻿@model NewLetter.Models.qenSecondary
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("highSchool", "profiler", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     

@@ -16,8 +16,7 @@ namespace NewLetter.Models
 
     public class companyRegistrationModel
     {
-        public companyDetail companyInfo { get; set; }
-        public EmployerDetail employerInfo { get; set; }
+       
 
     }
 
@@ -37,26 +36,7 @@ namespace NewLetter.Models
         public string subject { get; set; }
         public string body { get; set; }
     }
-   public class qendidateSearchmodel
-    {
-        
-        public long qenid { get; set; }
-        public string qenname { get; set; }
-        public string qenexperience { get; set; }
-        public string qenskills { get; set; }
-        public double qensalary { get; set; }
-        public int qencategory { get; set; }
-        //public int qencategory2 { get; set; }
-        //public int qencategory3 { get; set; }
-        public int jobid { get; set; }
-    }
-    public class hiredCandidateList
-    {
-        public long qenID { get; set; }
-        public string qenName { get; set; }
-        public string jobtitle { get; set; }
-        public string dateOfJoining { get; set; }
-        public long salary { get; set; }
-    }
+
+ 
     
 }

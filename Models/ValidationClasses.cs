@@ -11,9 +11,6 @@ namespace NewLetter.Models
     [MetadataType(typeof(qendidateListValidation))]
     public partial class qendidateList
     {
-        public int qenCategory { get; set; }
-       public long jobid { get; set; }
-        public string city1 { get; set; }
 
 
     }
@@ -35,7 +32,7 @@ namespace NewLetter.Models
 
 
     }
-    
+
     [MetadataType(typeof(EmpDetails))]
     public partial class qenEmpDetail
     {
@@ -115,13 +112,13 @@ namespace NewLetter.Models
         public string collegeUniversity { get; set; }
 
         [Required(ErrorMessage = "please enter college name")]
-        public string collegeName { get; set;}
+        public string collegeName { get; set; }
 
         [Required(ErrorMessage = "please enter course name")]
         public string courseName { get; set; }
 
         [Required(ErrorMessage = "please enter subjects name")]
-        public string subjects { get; set; } 
+        public string subjects { get; set; }
 
         [RegularExpression("^[0-9]*$", ErrorMessage = "invalid number")]
         [Required(ErrorMessage = "please enter percentage ")]
@@ -158,9 +155,9 @@ namespace NewLetter.Models
         [Required(ErrorMessage = "please enter passing year")]
         public string YearPassing { get; set; }
     }
-        
+
     public class qenrefvalidation
-    { 
+    {
 
         [Required(ErrorMessage = "please enter refrence name")]
         public string qenRefName1 { get; set; }
@@ -172,19 +169,19 @@ namespace NewLetter.Models
         [Required(ErrorMessage = "please enter mobile number")]
         [RegularExpression(@"^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$", ErrorMessage = "Invalid phone number")]
         public System.Nullable<double> qenRefPhone1 { get; set; }
-        [Required(ErrorMessage = "please enter email ")]        
+        [Required(ErrorMessage = "please enter email ")]
         [EmailAddress]
         public string qenRefEmail1 { get; set; }
         [Required(ErrorMessage = "please enter refrence name")]
         public string qenRefName2 { get; set; }
 
-        [Required(ErrorMessage = "please enter company name")]        
+        [Required(ErrorMessage = "please enter company name")]
         public string qenRefCompany2 { get; set; }
 
         [RegularExpression(@"^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$", ErrorMessage = "Invalid phone number")]
-        [Required(ErrorMessage = "please enter mobile number")]            
+        [Required(ErrorMessage = "please enter mobile number")]
         public System.Nullable<double> qenRefPhone2 { get; set; }
-        [Required(ErrorMessage = "please enter email ")]        
+        [Required(ErrorMessage = "please enter email ")]
         [EmailAddress]
         public string qenRefEmail2 { get; set; }
         //[Required(ErrorMessage = "please enter postion")]
@@ -197,10 +194,12 @@ namespace NewLetter.Models
     {
         public long qenID { get; set; }
         [Required(ErrorMessage = "please enter your name")]
+
         public string qenName { get; set; }
         [Required(ErrorMessage = "please enter your address")]
+
         public string qenAddress { get; set; }
-        
+
         [Required(ErrorMessage = "please enter your email")]
         [RegularExpression("^[a-z0-9_\\+-]+(\\.[a-z0-9_\\+-]+)*@[a-z0-9-]+(\\.[a-z0-9]+‌​)*\\.([a-z]{2,4})$", ErrorMessage = "Invalid email format.")]
         public string qenEmail { get; set; }
@@ -210,7 +209,25 @@ namespace NewLetter.Models
         public System.Nullable<long> qenPhone { get; set; }
         public string qenNationality { get; set; }
         public string qenPassport { get; set; }
+
+        [Required(ErrorMessage = "please enter your date of birth ")]
+        public string dob { get; set; }
+
+        [Required(ErrorMessage = "please enter your city")]
+        public string City { get; set; }
         
+
+
+         [Required(ErrorMessage = "please enter your state")]
+        public string state { get; set; }
+
+        [Required(ErrorMessage = "please enter your country")]
+        public string country { get; set; }
+
+        [DataType(DataType.PostalCode)]
+        [Required(ErrorMessage = "please enter your zipCode")]
+        public string zipCode { get; set; }
+
     }
 
     public class AcademicModel
@@ -277,64 +294,7 @@ namespace NewLetter.Models
         public bool RememberMe { get; set; }
     }
 
-    public class job_posting_Title
-    {
-        public long jobID { get; set; }
 
-        [StringLength(200, MinimumLength = 10, ErrorMessage = "200 charectar max")]
-        [Required(ErrorMessage = "please enter job title")]
-        [Display(Name = "Job Title")]
-        public string jobTitle { get; set; }
-
-        [AllowHtml]
-        [Display(Name = "Job Description")]
-        [StringLength(5000, MinimumLength = 10, ErrorMessage = "5000 charectar max")]
-        [Required(ErrorMessage = "job description required")]
-        public string jobDescription { get; set; }
-
-        [Display(Name = "Openings")]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "numeric allowed only")]
-        [Required(ErrorMessage = "no of openings required")]
-        public int openings { get; set; }
-
-
-        [Display(Name = "Experience(year)")]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "numeric allowed only")]
-        [Required(ErrorMessage = "year of experience required")]
-        public int experience { get; set; }
-
-        [Display(Name = "Salary")]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "numeric allowed only")]
-        [Required(ErrorMessage = "salary (gross salary) required")]
-        public int salary { get; set; }
-
-        [Display(Name = "Industry")]
-        [Required(ErrorMessage = "please select industry")]
-        public int industry { get; set; }
-
-
-        [Display(Name = "Currency")]
-        [Required(ErrorMessage = "please select currency")]
-        public string currency { get; set; }
-
-        [Display(Name = "Location")]
-        [Required(ErrorMessage = "location required")]
-        public string city { get; set; }
-
-        [Display(Name = "Job Type")]
-        [Required(ErrorMessage = "job type required")]
-        public int employmentType { get; set; }
-
-
-        [Display(Name = "Unit")]
-        [Required(ErrorMessage = "salary unit required")]
-        public string Unit { get; set; }
-
-        [Display(Name = "Salry visible to employee")]
-        public bool salaryVisibleToEmployee { get; set; }
-
-
-    }
 
 
     public class requiredSkills
@@ -347,71 +307,9 @@ namespace NewLetter.Models
 
         public long jobID { get; set; }
     }
-    public class company_
-    {
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "100 charectar max")]
-        [Display(Name = "Company Name")]
-        [Required(ErrorMessage = "Company name required")]
-        public string companyName { get; set; }
-
-        [AllowHtml]
-        [StringLength(500, MinimumLength = 3, ErrorMessage = "500 charectar max")]
-        [Display(Name = "About Company")]
-        [Required(ErrorMessage = "About company is required")]
-        public string aboutCompany { get; set; }
 
 
-        [StringLength(200, MinimumLength = 3, ErrorMessage = "200 charectar max")]
-        [Display(Name = "Company Website")]
-        [Url]
-        public string companyWebsite { get; set; }
 
-        [StringLength(30, MinimumLength = 5, ErrorMessage = "30 charectar max")]
-        [Display(Name = "Contact person")]
-        [Required(ErrorMessage = "Contact person required")]
-        public string contactPerson { get; set; }
-
-        [Required(ErrorMessage = "please enter contact person number")]
-        [RegularExpression(@"^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$", ErrorMessage = "Invalid phone number")]
-        [Display(Name = "Contact Number")]
-        public string contactNumber { get; set; }
-        [AllowHtml]
-        [Display(Name = "Additional Information")]
-        public string otherinformation { get; set; }
-
-        [Display(Name = "Resume received on mail")]
-        [EmailAddress]
-        [Required(ErrorMessage = "Email ID required ")]
-        public string receiveMailAt { get; set; }
-
-        public long jobID { get; set; }
-        public string companyLogo { get; set; }
-    }
-
-
-    public class empRegistration
-    {
-        [Required(ErrorMessage = "please enter company name")]
-        public string companyName { get; set; }
-
-        [Remote("isUserNameAvialable", "companyDetails", HttpMethod = "POST", ErrorMessage = "User name already exists. Please enter a different user name.")]
-        [Display(Name = "Email")]
-        [Required(ErrorMessage = "please enter your email")]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        public int cityID { get; set; }
-
-        public string website { get; set; }
-
-        public int companyIndustry { get; set; }
-        public int employerTypeID { get; set; }
-        public string password { get; set; }
-        public long employerID { get; set; }
-
-
-        public HttpPostedFileBase files { get; set; }
-    }
 
     public class candidateRegistration
     {
@@ -429,7 +327,7 @@ namespace NewLetter.Models
         [Display(Name = "Contact Number")]
         public long candidatePhone { get; set; }
 
-        
+
         public string password { get; set; }
         public long candidateID { get; set; }
 
@@ -444,78 +342,20 @@ namespace NewLetter.Models
         [Required(ErrorMessage = "please enter certificate name")]
         public string courseField { get; set; }
 
-       
-        [Required(ErrorMessage = "please enter athourity name")]       
+
+        [Required(ErrorMessage = "please enter athourity name")]
         public string collegeUniversity { get; set; }
 
         [Required(ErrorMessage = "please enter certificate number")]
         public long phdTitle { get; set; }
 
-        [Required(ErrorMessage = "please enter start date")]        
+        [Required(ErrorMessage = "please enter start date")]
         public DateTime phdStart { get; set; }
 
-        [Required(ErrorMessage = "please enter end date")]      
+        [Required(ErrorMessage = "please enter end date")]
         public DateTime phdEnd { get; set; }
 
     }
 
-
-
-    public class eforgotPassword
-    {
-        //[Remote("isUserNameAvialable", "companyDetails", HttpMethod = "POST", ErrorMessage = "User name already exists. Please enter a different user name.")]
-        [Display(Name = "Email")]
-        [Required(ErrorMessage = "please enter your email")]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        public string password { get; set; }
-    }
-    public class qenforgotPassword
-    {
-        //[Remote("isUserNameAvialable", "companyDetails", HttpMethod = "POST", ErrorMessage = "User name already exists. Please enter a different user name.")]
-        [Display(Name = "Email")]
-        [Required(ErrorMessage = "please enter your email")]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        public string password { get; set; }
-    }
-
-    public class AuxoDashBoard
-    {
-        public string JobID { get; set; }
-        public string jobTitle { get; set; }
-        public int orionCV { get; set; }
-        public int orionCVC1 { get; set; }
-        public int orionCVC2 { get; set; }
-        public int orionCVC3 { get; set; }
-
-        public int orionCOMM { get; set; }
-        public int orionPASS { get; set; }
-        public int orionMEET { get; set; }
-        public int shortList { get; set; }
-
-    }
-    public class mailReceivedInterested
-    {
-        public string qenName { get; set; }
-        public bool mailReceivedjobChancgeInterested { get; set; }
-        public long qenID { get; set; }
-        public string qenEmail { get; set; }
-        public bool selectedcandidate { get; set; }
-    }
-
-    public class mailReceivedtestSchedule
-    {
-        public string qenName { get; set; }
-        public long qenID { get; set; }
-        public bool mailReceivedscheduled { get; set; }
-        public string qenEmail { get; set; }
-        public int testScheduleCountInt { get; set; }
-        public long jobID { get; set; }
-        public DateTime testScheduledDateTime { get; set; }
-        public int matchSkills { get; set; }
-    }
 
 }

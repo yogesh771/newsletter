@@ -1,0 +1,223 @@
+﻿@using System.Web.Mvc.Html
+@model NewLetter.Models.AcademicModel
+@{
+    ViewBag.Title = "AcademicInfo";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Academic Information</title>
+    <link href="~/css/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+     <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+   
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <style>
+        span.col_1.tleft.text-danger.field-validation-error :before {
+            content: " Warning ! ";
+            color: red;
+            font-weight: bold;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
+  
+   
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
+</head>
+<body id="ad">
+    <div class="container">
+        <div class="row sub-container">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="top-logos">
+                    <img src="~/images/qendidate-logo.png" />
+                    <img src="~/images/orion-logo.png" />
+                </div>
+            </div>
+
+            @{ var qenid = ViewBag.qenid;}
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="right-box">
+                    <div class="form" id="content-1">    
+                        
+                            <h1>academic information</h1>
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            High School
+                                        </a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="card-block">
+                                        @Html.Action("highSchool", "profiler", new { qenid = @qenid })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Higher School
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="card-block">
+                                        @Html.Action("higherSchool", "profiler", new { qenid = @qenid })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Graduation
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="card-block">
+                                        @Html.Action("Graduation", "profiler", new { qenid = @qenid })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingfour">
+                                    <h5 class="mb-0">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                            Post Graduation
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapsefour" class="collapse" role="tabpanel" aria-labelledby="headingfour">
+                                    <div class="card-block">
+                                        @Html.Action("PostGraduation", "profiler", new { qenid = @qenid })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                      
+                    </div>
+
+
+               
+                    <div class="group next-btn-wrap">
+                        <a class="prev-btn" onclick="location.href='@Url.Action("PersonalInfo", "profiler",new { qenid = @qenid })'">Previous</a>
+                        <a class="nxt-btn" onclick="location.href='@Url.Action("certifications", "profiler",new { qenid = @qenid })'">Next</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="left-text">
+                <p>Achieve your dream by jumpstarting with Qendidate</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+
+   
+
+    @*<script>
+        function highSchool()
+        {
+            debugger
+            var URL = '@Url.Action("highSchool", "NewLetter")?qenid='+'@qenid';
+            $.get(URL, function (data) {
+                debugger
+                $("#education").html(data);
+            });
+        }
+    </script>
+
+    <script>
+        function higherSchool() {
+            debugger
+            var URL = '@Url.Action("higherSchool", "NewLetter")?qenid=' + '@qenid';
+            $.get(URL, function (data) {
+                debugger
+                $("#education").html(data);
+            });
+        }
+    </script>
+    <script>
+        function Graduation()
+        {
+            debugger
+            var URL = '@Url.Action("Graduation", "NewLetter")?qenid='+'@qenid';
+            $.get(URL, function (data) {
+                debugger
+                $("#education").html(data);
+            });
+        }
+    </script>
+    <script>
+        function PostGraduation()
+        {
+            debugger
+            var URL = '@Url.Action("PostGraduation", "NewLetter")?qenid='+'@qenid';
+            $.get(URL, function (data) {
+                debugger
+                $("#education").html(data);
+            });
+        }
+    </script>*@
+</body>
+</html>  

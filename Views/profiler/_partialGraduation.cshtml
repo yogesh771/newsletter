@@ -1,6 +1,6 @@
 ﻿@model NewLetter.Models.qendidateGraduation
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Graduation", "profiler", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 

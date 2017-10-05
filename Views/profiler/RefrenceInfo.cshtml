@@ -40,6 +40,33 @@
             color: red;
         }
     </style>
+	<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
+
 </head>
 <body id="references">
     <div class="container">
@@ -55,9 +82,9 @@
                 <div class="right-box">
 
                   
-                        @using (Html.BeginForm("SaveRefrenceInfo", "NewLetter", FormMethod.Post, new { id = "msform" }))
+                        @using (Html.BeginForm("SaveRefrenceInfo", "profiler", FormMethod.Post, new { id = "msform" }))
                         { 
-                             <div class="form">
+                             <div class="form" id="content-1">
                         @Html.AntiForgeryToken()
                         @Html.HiddenFor(m => m.qenid)
                  
@@ -131,13 +158,14 @@
                         
                                  
 
-                               <div class="group next-btn-wrap">
-                                   <a class="prev-btn" onclick="location.href='@Url.Action("skills", "NewLetter",new { qenID = @ViewBag.qenID_ })'">Previous</a>                                 
-                                  
-                                   <input type="submit" name="Submit" id="btnnext" class="Submit action-button" value="Submit" />
-                               </div>
+                               
                        
                     </div>
+					<div class="group next-btn-wrap">
+                                   <a class="prev-btn" onclick="location.href='@Url.Action("skills", "profiler",new { qenID = @ViewBag.qenID_ })'">Previous</a>                                 
+                                  
+                                   <input type="submit" name="Submit" id="btnnext" class="Submit action-button" value="Next" />
+                               </div>
                         }
                        
                        

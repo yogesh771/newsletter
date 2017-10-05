@@ -1,0 +1,191 @@
+﻿@model IEnumerable<NewLetter.Models.qenSkill>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Quendidate</title>
+    <!-- Bootstrap -->
+    <link href="~/css/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+   
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>*@
+
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+  
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+ 
+    <style>
+        span.col_1.tleft.text-danger.field-validation-error :before {
+            content: " Warning ! ";
+            color: red;
+            font-weight: bold;
+        }
+
+        .text-danger {
+            color: red;
+        }
+    </style>
+<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
+
+</head>
+<body id="employment">
+    @{ var id = ViewBag.qenID;}
+
+    <div class="container">
+        <div class="row sub-container">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="top-logos">
+                    <img src="/images/qendidate-logo.png" />
+                    <img src="/images/orion-logo.png" />
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+
+                <div class="right-box">
+
+                    <div class="form" id="content-1">
+
+                        <h1>Skills</h1>
+                        @if (Model.Count() > 0)
+                        {
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        
+                                        <th>Skill</th>
+                                        <th>Exp.</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                               
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                       
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.skill.skillName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.yearOfExp)
+                                        </td>
+
+                                        <td>
+                                            <a onclick="return editCerificate(@item.qenSkillsID);"><i class="glyphicon glyphicon-edit"></i></a>
+                                            <a onclick="return deleteCerificate(@item.qenSkillsID,this);" id="delete_@item.qenSkillsID"><i class="glyphicon glyphicon-trash"></i></a>
+
+
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                                    }
+                        <div id="AddSkills">
+                            @Html.Action("skillsAddPop", new { qenid = @id })
+                        </div>
+
+                        
+                    </div>
+					<div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("EmplomentInfo", "profiler",new { qenid = @id })'"> Previous</a>
+                            <a class="nxt-btn" onclick="location.href='@Url.Action("RefrenceInfo", "profiler",new { qenid = @id})'" >Next</a>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function editCerificate(qenSkillsID)
+       {
+           debugger
+           var URL = '@Url.Action("skillsAddPop", "profiler")?qenSkillsID=' + qenSkillsID;
+           $.get(URL, function (data) {
+               debugger
+               $("#AddSkills").html(data);
+           });
+       }
+
+        function deleteCerificate(qenSkillsID, ID)
+       {
+           debugger
+           $("#certificatelistbody").html();
+           var URL = '@Url.Action("DeleteqenSkills", "profiler")?qenSkillsID=' + qenSkillsID;
+
+
+               $.get(URL, function (data) {
+                   debugger
+                   location = location.href;
+               });
+
+
+       }
+    </script>
+    <script type="text/javascript">
+        var jqOld = jQuery.noConflict();
+        $("#skillName").autocomplete({
+            source: function (request, response) {
+                debugger
+                $.ajax({
+                    url: "select_fillSkills",                   
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function (data) {
+                        debugger
+                        response($.map(data, function (item) {
+                            debugger
+                            return { label: item.skillName, value: item.skillName };
+                        }))
+
+                    }
+                })
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+
+    </script>
+</body>
+</html>

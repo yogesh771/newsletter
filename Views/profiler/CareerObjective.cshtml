@@ -52,7 +52,34 @@
         .text-danger {
             color: red;
         }
+		.mCSB_container{width:100% !important;}
     </style>
+	<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
 </head>
 
 <body id="certi">
@@ -70,9 +97,9 @@
 
                 <div class="right-box">
 
-                   @using (Html.BeginForm("CareerObjective", "NewLetter", FormMethod.Post, new { id = "msform" }))
+                   @using (Html.BeginForm("CareerObjective", "profiler", FormMethod.Post, new { id = "msform" }))
                    {
-                    <div class="form">
+                    <div class="form" id="content-1">
                         @Html.AntiForgeryToken()
 
                         <h1>Career Objective</h1>
@@ -91,12 +118,12 @@
 
                         </div>
 
-                        <div class="group next-btn-wrap">
-                            <a class="prev-btn" onclick="location.href='@Url.Action("RefrenceInfo", "NewLetter", new { qenID = @id })'">Previous</a>
-
+                        
+                    </div>
+					<div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("RefrenceInfo", "profiler", new { qenID = @id })'">Previous</a>
                             <input type="submit" name="Submit" id="btnnext" class="Submit action-button" value="Submit" />
                         </div>
-                    </div>
                    }
                 </div>
             </div>

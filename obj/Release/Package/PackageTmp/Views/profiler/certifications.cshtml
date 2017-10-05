@@ -1,7 +1,7 @@
-﻿@model NewLetter.Models.EmployerModel
-
-
-
+﻿@model IEnumerable<NewLetter.Models.qendidatePHD>
+@{
+    ViewBag.Title = "Certifications";
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +28,6 @@
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
- 
-   
     <style>
         span.col_1.tleft.text-danger.field-validation-error :before {
             content: " Warning ! ";
@@ -41,9 +39,36 @@
             color: red;
         }
     </style>
+<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
 
 </head>
-<body id="employment">
+
+<body id="certi">
     @{ var id = ViewBag.qenID;}
 
     <div class="container">
@@ -58,38 +83,36 @@
 
                 <div class="right-box">
 
-                    <div class="form">
+                    <div class="form" id="content-1">
 
-                        <h1>EMPLOYMENT</h1>
+                        <h1>certifications</h1>
 
-                        @{ if (Model.employers.Count() != 0)
+                        @{ if (Model.Count() != 0)
                             {
 
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            
-                                            <th>Company Name</th>
-                                            <th>Designation</th>
-                                            <th>From</th>
-                                           
-                                            <th></th>
+                                          
+                                            <th>Name</th>
+                                            <th>Authority</th>
+                                            <th>Licence No</th>
+                                            <th> </th>
                                         </tr>
                                     </thead>
                                     <tbody id="certificatelistbody">
-                                        @{int row = 0;  }
-                                        @foreach (var data in Model.employers)
+                                      
+                                        @foreach (var data in Model)
                                         {
-                                          
-                                            <tr>
-                                             
-                                                <td>@data.CompanyName</td>
-                                                <td>@data.qenPosition</td>
-                                                <td>@data.qenEmpFrom <br>@data.qenEmpTo</td>
-                                               
+                                           
+                                            <tr> 
+                                                <td>@data.courseField</td>
+                                                <td>@data.collegeUniversity</td>
+                                                <td>@data.phdTitle </td>
+
                                                 <td>
-                                                    <a onclick="return editCerificate(@data.qenEmploymentNum);"><i class="glyphicon glyphicon-edit"></i></a>
-                                                    <a onclick="return deleteCerificate(@data.qenEmploymentNum,this);" id="delete_@data.qenEmploymentNum"><i class="glyphicon glyphicon-trash"></i></a>
+                                                    <a onclick="return editCerificate(@data.phdid);"><i class="glyphicon glyphicon-edit"></i></a>
+                                                    <a onclick="return deleteCerificate(@data.phdid,this);" id="delete_@data.phdid"><i class="glyphicon glyphicon-trash"></i></a>
                                                 </td>
                                             </tr>
                                         }
@@ -98,35 +121,42 @@
                                             }
                         }
                         <div id="AddSkills">
-                            @Html.Action("EmploymentAddPop", new { qenid = @id })
+                            @Html.Action("certificationsAddPop", new { qenid = @id })
                         </div>
 
-                        <div class="group next-btn-wrap">
-                            <a class="prev-btn" onclick="location.href='@Url.Action("certifications", "NewLetter",new { qenid = @Model.qenid })'">Previous</a>
-                            <a class="nxt-btn" onclick="location.href='@Url.Action("skills", "NewLetter",new { qenid = @Model.qenid })'">Next</a>
-                        </div>
+                        
                     </div>
+					<div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("AcademicInfo", "profiler",new { qenid = @id })'">Previous</a>
+                            <a class="nxt-btn" onclick="location.href='@Url.Action("EmplomentInfo", "profiler",new { qenid = @id})'">Next</a>
+                        </div>
                 </div>
             </div>
 
         </div>
 
     </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
     <script>
-        function editCerificate(empno)
+       function editCerificate(phdid)
        {
            debugger
-           var URL = '@Url.Action("EmploymentAddPop", "NewLetter")?empno=' + empno;
+           var URL = '@Url.Action("certificationsAddPop", "profiler")?phdid='+ phdid ;
            $.get(URL, function (data) {
                debugger
                $("#AddSkills").html(data);
            });
        }
 
-        function deleteCerificate(empno, ID)
+       function deleteCerificate(phdid,ID)
        {
-           debugger         
-           var URL = '@Url.Action("Deletejob", "NewLetter")?empno=' + empno;
+           debugger
+
+           var URL = '@Url.Action("DeleteCertifications", "profiler")?phdid=' + phdid;
 
 
                $.get(URL, function (data) {
@@ -137,7 +167,6 @@
 
        }
     </script>
+
 </body>
 </html>
-
-    

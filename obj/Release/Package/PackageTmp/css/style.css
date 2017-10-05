@@ -14,10 +14,8 @@
 	font-family: 'opensans';
 	src:  url('OpenSans-Regular.ttf') format('ttf'),
 }
-a {
-	outline:0px;
-	border:0px;
-}
+a{outline:0px;	border:0px;}
+a:focus{color:inherit;}
 html, body {
 	height: 100%;
 }
@@ -31,6 +29,8 @@ body {
 	max-width:1380px;
 	width:100% !important;
 }
+.select-box{overflow:hidden;}
+.select-box select{background:url(../images/select-arrow.jpg) right 11px no-repeat; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 .group.next-btn-wrap {
 	position: absolute;
 	bottom: 0;
@@ -66,7 +66,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
  color:#000 !important;
 }
 .right-box input {
-	color:#777;
+	color:#000;
 }
 .alert-warning.error-custom {
 	background:none;
@@ -75,16 +75,16 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color:#ff0000;
 }
 .sub-container input, select, textarea {
-	text-transform:lowercase;
+	text-transform:uppercase;
 }
 .sub-container input:focus, select:focus, textarea:focus {
-	text-transform:uppercase;
+	text-transform:capitalize;
 }
 .sub-container select {
-	text-transform:lowercase;
+	text-transform:capitalize;
 }
 .sub-container .form-control:focus {
-	text-transform:uppercase;
+	text-transform:capitalize;
 }
 body#welcome, body#certi {
 	background-image: url(../images/welcome-bg.png);
@@ -151,7 +151,6 @@ body#thankyou {
 	background:#4a4dd0;
 	font-family: 'opensans', sans-serif;
 	color:#ffffff;
-	position:absolute;
 	width:100%;
 	bottom:0;
 }
@@ -162,7 +161,7 @@ body#thankyou {
 	font-size:28px;
 	text-transform:capitalize;
 	font-weight:bold;
-	margin-bottom:33px;
+	margin-bottom:5px;
 }
 #pd .right-box h1 {
 	background-image:url("../images/user-icon.png");
@@ -183,7 +182,7 @@ body#thankyou {
 	text-align:left;
 	padding-left:59px;
 	font-weight:bold;
-	font-family:'gotham', sans-serif;
+	font-family:"Roboto",sans-serif;
 }
 #skill .right-box h1 {
 	background-image:url("../images/user-icon-stars.png");
@@ -195,7 +194,7 @@ body#thankyou {
 	padding-left:59px;
 	font-weight:bold;
 	line-height:30px;
-	font-family:'gotham', sans-serif;
+	font-family:"Roboto",sans-serif;
 }
 #employment .right-box h1 {
 	background-image:url("../images/user-icon-tie.png");
@@ -207,7 +206,7 @@ body#thankyou {
 	padding-left:59px;
 	font-weight:bold;
 	line-height:30px;
-	font-family:'gotham', sans-serif;
+	font-family:"Roboto",sans-serif;
 }
 #references .right-box h1 {
 	background-image:url("../images/user-icon-refer.png");
@@ -219,7 +218,7 @@ body#thankyou {
 	padding-left:59px;
 	font-weight:bold;
 	line-height:30px;
-	font-family:'gotham', sans-serif;
+	font-family:"Roboto",sans-serif;
 }
 #thankyou .right-box h1 {
 	font-size:30px;
@@ -227,21 +226,38 @@ body#thankyou {
 	color:#000000 !important;
 	margin-top:57px;
 	margin-bottom:76px;
-	line-height:50px;
+	line-height:40px;
 	font-weight:800;
 }
 #thankyou .right-box .tick {
-	padding:0 52px;
+	padding:0;
 }
 #thankyou .right-box .tick p {
 	font-size:16px;
 	font-family: 'Open Sans', sans-serif;
 }
 #thankyou .right-box .tick img {
-	margin-bottom:50px;
+	margin-top:40px;
 }
 .form hr {
 	margin:40px 0;
+}
+.right-box input.nxt-btn, .right-box input.prev-btn {
+	background:#ee5f52;
+	padding:10px 37px;
+	border-radius:25px;
+	text-transform:uppercase;
+	color:#ffffff;
+	margin-top:15px;
+	font-family:'segoeui', sans-serif;
+	border:1px solid transparent;
+	width:auto;
+	display:inline-block;
+}
+.prev-btn {
+	background:#7b7cab;
+	padding:15px 37px;
+	margin-right:15px;
 }
 .nxt-btn, .prev-btn {
 	background:#ee5f52;
@@ -252,14 +268,16 @@ body#thankyou {
 	margin-top:15px;
 	font-family:'segoeui', sans-serif;
 	border:1px solid transparent;
+	width:auto;
+	display:inline-block; cursor:pointer;
 }
-.prev-btn {
-	background:#7b7cab;
-	padding:15px 37px;
-	margin-right:15px;
-}
+.table{text-align:left;}
+.table div.group{  margin-bottom: 2px;}
+.table.academic-block td { vertical-align:text-top;}
+
+#acceptterms{width:auto;}
 .nxt-btn {
-	padding:15px 57px;
+	padding:10px 35px;
 
 }
 .next-btn-wrap {
@@ -313,8 +331,10 @@ body#thankyou {
 /*personal details page form*/
 
 .form {
-	padding: 3em 4em 0em 4em;
+	padding:1.5em 0.5em 0 3em;
 }
+#photoA{border-bottom:0px;}
+.btn-default.btn-file{border:0px !important;}
 .btn-default {
 	border:0 !important;
 	text-align:left !important;
@@ -326,6 +346,19 @@ body#thankyou {
 	height:387px;
 	overflow:auto;
 }
+.Submit.action-button {
+    background: #ee5f52 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    color: #ffffff;
+    display: inline-block;
+    font-family: "segoeui",sans-serif;
+    margin-top: 15px;
+    padding: 10px 37px;
+    text-transform: uppercase;
+    width: auto;
+}
+.group.plus-btn-wrap.m-top .plus-btn{border-bottom:0px;}
 .group.plus-btn-wrap.m-top{margin-top:5px;}
 .form-control, .btn-default {
 	border-bottom: 1px solid #cecece !important;
@@ -346,7 +379,7 @@ body#thankyou {
 	margin-top:20px;
 }
 input {
-	font-size: 18px;
+	font-size: 14px;
 	padding: 10px 10px 10px 5px;
 	
 	display: block;
@@ -373,6 +406,7 @@ label {
 	text-transform:uppercase;
 	font-family:'verdana-reg', sans-serif;
 }
+
 
 
 /* active */
@@ -437,6 +471,22 @@ p.blue-title {
 input:focus ~ .highlight {
  animation: inputHighlighter 0.3s ease;
 }
+
+#content-1{overflow: hidden;}
+
+.steps span {   background: #fc881d none repeat scroll 0 0;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 50px; }
+	
+.form.thankyou { overflow:visible; padding: 1.5em 3em;}	
+@media only screen and (min-width: 1024px){
+ 
+}
+
  @media (max-width:767px) {
 body {
 	background-size:contain;

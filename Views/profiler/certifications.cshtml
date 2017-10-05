@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<NewLetter.Models.qendidatePHD>
 @{
-    ViewBag.Title = "PhdInfo";
+    ViewBag.Title = "Certifications";
 }
 
 <!DOCTYPE html>
@@ -28,9 +28,6 @@
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
-    
-    
-
     <style>
         span.col_1.tleft.text-danger.field-validation-error :before {
             content: " Warning ! ";
@@ -42,6 +39,33 @@
             color: red;
         }
     </style>
+<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
+
 </head>
 
 <body id="certi">
@@ -59,7 +83,7 @@
 
                 <div class="right-box">
 
-                    <div class="form">
+                    <div class="form" id="content-1">
 
                         <h1>certifications</h1>
 
@@ -100,11 +124,12 @@
                             @Html.Action("certificationsAddPop", new { qenid = @id })
                         </div>
 
-                        <div class="group next-btn-wrap">
-                            <a class="prev-btn" onclick="location.href='@Url.Action("AcademicInfo", "NewLetter",new { qenid = @id })'">Previous</a>
-                            <a class="nxt-btn" onclick="location.href='@Url.Action("EmplomentInfo", "NewLetter",new { qenid = @id})'">Next</a>
-                        </div>
+                        
                     </div>
+					<div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("AcademicInfo", "profiler",new { qenid = @id })'">Previous</a>
+                            <a class="nxt-btn" onclick="location.href='@Url.Action("EmplomentInfo", "profiler",new { qenid = @id})'">Next</a>
+                        </div>
                 </div>
             </div>
 
@@ -120,7 +145,7 @@
        function editCerificate(phdid)
        {
            debugger
-           var URL = '@Url.Action("certificationsAddPop", "NewLetter")?phdid='+ phdid ;
+           var URL = '@Url.Action("certificationsAddPop", "profiler")?phdid='+ phdid ;
            $.get(URL, function (data) {
                debugger
                $("#AddSkills").html(data);
@@ -131,7 +156,7 @@
        {
            debugger
 
-           var URL = '@Url.Action("DeleteCertifications", "NewLetter")?phdid=' + phdid;
+           var URL = '@Url.Action("DeleteCertifications", "profiler")?phdid=' + phdid;
 
 
                $.get(URL, function (data) {

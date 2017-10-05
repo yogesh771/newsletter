@@ -12,15 +12,21 @@
     <link href="~/css/style.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="~/css/bootstrap.css" rel="stylesheet">
+   
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>*@
 
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+  
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="~/js/bootstrap.min.js"></script>
+
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+ 
     <style>
         span.col_1.tleft.text-danger.field-validation-error :before {
             content: " Warning ! ";
@@ -32,6 +38,32 @@
             color: red;
         }
     </style>
+<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+(function($){
+  $(window).load(function(){
+
+    $("#content-1").mCustomScrollbar({
+      axis:"yx", //set both axis scrollbars
+      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
+      // change mouse-wheel axis on-the-fly 
+      callbacks:{
+        onOverflowY:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
+        },
+        onOverflowX:function(){
+          var opt=$(this).data("mCS").opt;
+          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
+        },
+      }
+    });
+
+  });
+})(jQuery);
+</script>
 
 </head>
 <body id="employment">
@@ -49,7 +81,7 @@
 
                 <div class="right-box">
 
-                    <div class="form">
+                    <div class="form" id="content-1">
 
                         <h1>Skills</h1>
                         @if (Model.Count() > 0)
@@ -92,11 +124,12 @@
                             @Html.Action("skillsAddPop", new { qenid = @id })
                         </div>
 
-                        <div class="group next-btn-wrap">
-                            <a class="prev-btn" onclick="location.href='@Url.Action("EmplomentInfo", "NewLetter",new { qenid = @id })'"> Previous</a>
-                            <a class="nxt-btn" onclick="location.href='@Url.Action("RefrenceInfo", "NewLetter",new { qenid = @id})'" >Next</a>
-                        </div>
+                        
                     </div>
+					<div class="group next-btn-wrap">
+                            <a class="prev-btn" onclick="location.href='@Url.Action("EmplomentInfo", "profiler",new { qenid = @id })'"> Previous</a>
+                            <a class="nxt-btn" onclick="location.href='@Url.Action("RefrenceInfo", "profiler",new { qenid = @id})'" >Next</a>
+                        </div>
                 </div>
             </div>
 
@@ -107,7 +140,7 @@
         function editCerificate(qenSkillsID)
        {
            debugger
-           var URL = '@Url.Action("skillsAddPop", "NewLetter")?qenSkillsID=' + qenSkillsID;
+           var URL = '@Url.Action("skillsAddPop", "profiler")?qenSkillsID=' + qenSkillsID;
            $.get(URL, function (data) {
                debugger
                $("#AddSkills").html(data);
@@ -118,7 +151,7 @@
        {
            debugger
            $("#certificatelistbody").html();
-           var URL = '@Url.Action("DeleteqenSkills", "NewLetter")?qenSkillsID=' + qenSkillsID;
+           var URL = '@Url.Action("DeleteqenSkills", "profiler")?qenSkillsID=' + qenSkillsID;
 
 
                $.get(URL, function (data) {
@@ -130,10 +163,8 @@
        }
     </script>
     <script type="text/javascript">
-
-      
+        var jqOld = jQuery.noConflict();
         $("#skillName").autocomplete({
-
             source: function (request, response) {
                 debugger
                 $.ajax({

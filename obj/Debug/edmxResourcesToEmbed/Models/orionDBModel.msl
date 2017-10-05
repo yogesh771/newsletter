@@ -1,17 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="oriondbModelStoreContainer" CdmEntityContainer="oriondbEntities">
-    <EntitySetMapping Name="advertisementLists">
-      <EntityTypeMapping TypeName="oriondbModel.advertisementList">
-        <MappingFragment StoreEntitySet="advertisementList">
-          <ScalarProperty Name="advertisementURL" ColumnName="advertisementURL" />
-          <ScalarProperty Name="advertisementRefstatus" ColumnName="advertisementRefstatus" />
-          <ScalarProperty Name="advertisementimageURL" ColumnName="advertisementimageURL" />
-          <ScalarProperty Name="empID" ColumnName="empID" />
-          <ScalarProperty Name="advertisementRefID" ColumnName="advertisementRefID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+  <EntityContainerMapping StorageEntityContainer="oriondbModelStoreContainer" CdmEntityContainer="oriondbEntities1">
     <EntitySetMapping Name="app_error_log">
       <EntityTypeMapping TypeName="oriondbModel.app_error_log">
         <MappingFragment StoreEntitySet="app_error_log">
@@ -23,300 +12,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="App_status">
-      <EntityTypeMapping TypeName="oriondbModel.App_status">
-        <MappingFragment StoreEntitySet="App_status">
-          <ScalarProperty Name="status" ColumnName="status" />
-          <ScalarProperty Name="App_status_id" ColumnName="App_status_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Candidate_status">
-      <EntityTypeMapping TypeName="oriondbModel.Candidate_status">
-        <MappingFragment StoreEntitySet="Candidate_status">
-          <ScalarProperty Name="status" ColumnName="status" />
-          <ScalarProperty Name="Candidate_status1" ColumnName="Candidate_status" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="cities">
-      <EntityTypeMapping TypeName="oriondbModel.city">
-        <MappingFragment StoreEntitySet="city">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="stateID" ColumnName="stateID" />
-          <ScalarProperty Name="longitude" ColumnName="longitude" />
-          <ScalarProperty Name="latitude" ColumnName="latitude" />
-          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
-          <ScalarProperty Name="city1" ColumnName="city" />
-          <ScalarProperty Name="cityID" ColumnName="cityID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="companyDetails">
-      <EntityTypeMapping TypeName="oriondbModel.companyDetail">
-        <MappingFragment StoreEntitySet="companyDetails">
-          <ScalarProperty Name="employerTypeID" ColumnName="employerTypeID" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
-          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="logo" ColumnName="logo" />
-          <ScalarProperty Name="ctsNo" ColumnName="ctsNo" />
-          <ScalarProperty Name="tinNo" ColumnName="tinNo" />
-          <ScalarProperty Name="gstNo" ColumnName="gstNo" />
-          <ScalarProperty Name="companyDescription" ColumnName="companyDescription" />
-          <ScalarProperty Name="companyIndustry" ColumnName="companyIndustry" />
-          <ScalarProperty Name="website" ColumnName="website" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="cityID" ColumnName="cityID" />
-          <ScalarProperty Name="companyName" ColumnName="companyName" />
-          <ScalarProperty Name="companyID" ColumnName="companyID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="countries">
-      <EntityTypeMapping TypeName="oriondbModel.country">
-        <MappingFragment StoreEntitySet="country">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="Country1" ColumnName="Country" />
-          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="currencies">
-      <EntityTypeMapping TypeName="oriondbModel.currency">
-        <MappingFragment StoreEntitySet="currency">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="currency1" ColumnName="currency" />
-          <ScalarProperty Name="currencyID" ColumnName="currencyID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Educations">
-      <EntityTypeMapping TypeName="oriondbModel.Education">
-        <MappingFragment StoreEntitySet="Education">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="educationName" ColumnName="educationName" />
-          <ScalarProperty Name="EducationID" ColumnName="EducationID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="EmployerDetails">
-      <EntityTypeMapping TypeName="oriondbModel.EmployerDetail">
-        <MappingFragment StoreEntitySet="EmployerDetails">
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="roleID" ColumnName="roleID" />
-          <ScalarProperty Name="companyID" ColumnName="companyID" />
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="employerTypes">
-      <EntityTypeMapping TypeName="oriondbModel.employerType">
-        <MappingFragment StoreEntitySet="employerType">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="employerType1" ColumnName="employerType" />
-          <ScalarProperty Name="employerTypeID" ColumnName="employerTypeID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="EmploymentTypes">
-      <EntityTypeMapping TypeName="oriondbModel.EmploymentType">
-        <MappingFragment StoreEntitySet="EmploymentType">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="EmploymentType1" ColumnName="EmploymentType" />
-          <ScalarProperty Name="EmploymentTypeID" ColumnName="EmploymentTypeID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="finalQendidateLists">
-      <EntityTypeMapping TypeName="oriondbModel.finalQendidateList">
-        <MappingFragment StoreEntitySet="finalQendidateList">
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="expectedJoiningDate" ColumnName="expectedJoiningDate" />
-          <ScalarProperty Name="candidatePosition" ColumnName="candidatePosition" />
-          <ScalarProperty Name="candidateSalary" ColumnName="candidateSalary" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="finalCandidateID" ColumnName="finalCandidateID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="genderLists">
       <EntityTypeMapping TypeName="oriondbModel.genderList">
         <MappingFragment StoreEntitySet="genderList">
           <ScalarProperty Name="genderName" ColumnName="genderName" />
           <ScalarProperty Name="genderID" ColumnName="genderID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="HiredCandidates">
-      <EntityTypeMapping TypeName="oriondbModel.HiredCandidate">
-        <MappingFragment StoreEntitySet="HiredCandidate">
-          <ScalarProperty Name="SpecialComment" ColumnName="SpecialComment" />
-          <ScalarProperty Name="Designtion" ColumnName="Designtion" />
-          <ScalarProperty Name="ExpectedSalaryGross" ColumnName="ExpectedSalaryGross" />
-          <ScalarProperty Name="ExpectedSalaryMonthly" ColumnName="ExpectedSalaryMonthly" />
-          <ScalarProperty Name="joinningDate" ColumnName="joinningDate" />
-          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="hiredID" ColumnName="hiredID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="industries">
-      <EntityTypeMapping TypeName="oriondbModel.industry">
-        <MappingFragment StoreEntitySet="industry">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="industryName" ColumnName="industryName" />
-          <ScalarProperty Name="industryID" ColumnName="industryID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="InterViewerComments">
-      <EntityTypeMapping TypeName="oriondbModel.InterViewerComment">
-        <MappingFragment StoreEntitySet="InterViewerComment">
-          <ScalarProperty Name="ExpectedSalaryGross" ColumnName="ExpectedSalaryGross" />
-          <ScalarProperty Name="ExpectedSalaryMonthly" ColumnName="ExpectedSalaryMonthly" />
-          <ScalarProperty Name="Candidate_status" ColumnName="Candidate_status" />
-          <ScalarProperty Name="Comment" ColumnName="Comment" />
-          <ScalarProperty Name="Department" ColumnName="Department" />
-          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="commentID" ColumnName="commentID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="jobDetails">
-      <EntityTypeMapping TypeName="oriondbModel.jobDetail">
-        <MappingFragment StoreEntitySet="jobDetails">
-          <ScalarProperty Name="jobURL" ColumnName="jobURL" />
-          <ScalarProperty Name="advertisementRefID" ColumnName="advertisementRefID" />
-          <ScalarProperty Name="gender" ColumnName="gender" />
-          <ScalarProperty Name="companyID" ColumnName="companyID" />
-          <ScalarProperty Name="otherinformation" ColumnName="otherinformation" />
-          <ScalarProperty Name="salaryVisibleToEmployee" ColumnName="salaryVisibleToEmployee" />
-          <ScalarProperty Name="compeletPosted" ColumnName="compeletPosted" />
-          <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
-          <ScalarProperty Name="responsesEmailID" ColumnName="responsesEmailID" />
-          <ScalarProperty Name="CompanyWebsite" ColumnName="CompanyWebsite" />
-          <ScalarProperty Name="CompanyDescription" ColumnName="CompanyDescription" />
-          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="jobContactPersonEmail" ColumnName="jobContactPersonEmail" />
-          <ScalarProperty Name="jobContactPersonMobile" ColumnName="jobContactPersonMobile" />
-          <ScalarProperty Name="jobContactPersonName" ColumnName="jobContactPersonName" />
-          <ScalarProperty Name="jobStatusID" ColumnName="jobStatusID" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="modifiedBy" ColumnName="modifiedBy" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
-          <ScalarProperty Name="NoOfOpenings" ColumnName="NoOfOpenings" />
-          <ScalarProperty Name="EducationReq" ColumnName="EducationReq" />
-          <ScalarProperty Name="EmploymentTypeID" ColumnName="EmploymentTypeID" />
-          <ScalarProperty Name="cityID" ColumnName="cityID" />
-          <ScalarProperty Name="industryID" ColumnName="industryID" />
-          <ScalarProperty Name="unit" ColumnName="unit" />
-          <ScalarProperty Name="currency" ColumnName="currency" />
-          <ScalarProperty Name="salary" ColumnName="salary" />
-          <ScalarProperty Name="workExpMin" ColumnName="workExpMin" />
-          <ScalarProperty Name="jobDescription" ColumnName="jobDescription" />
-          <ScalarProperty Name="jobTitle" ColumnName="jobTitle" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="jobSavedQendidates">
-      <EntityTypeMapping TypeName="oriondbModel.jobSavedQendidate">
-        <MappingFragment StoreEntitySet="jobSavedQendidate">
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="jobSavedDateTime" ColumnName="jobSavedDateTime" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobSavedID" ColumnName="jobSavedID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="jobSkills">
-      <EntityTypeMapping TypeName="oriondbModel.jobSkill">
-        <MappingFragment StoreEntitySet="jobSkills">
-          <ScalarProperty Name="skillsID" ColumnName="skillsID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="jobSkillsID" ColumnName="jobSkillsID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="jobStatus">
-      <EntityTypeMapping TypeName="oriondbModel.jobStatu">
-        <MappingFragment StoreEntitySet="jobStatus">
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="statuts" ColumnName="statuts" />
-          <ScalarProperty Name="jobStatusID" ColumnName="jobStatusID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ProfilePerformances">
-      <EntityTypeMapping TypeName="oriondbModel.ProfilePerformance">
-        <MappingFragment StoreEntitySet="ProfilePerformance">
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="Contacted" ColumnName="Contacted" />
-          <ScalarProperty Name="Downloaded" ColumnName="Downloaded" />
-          <ScalarProperty Name="ViewedDate" ColumnName="ViewedDate" />
-          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="performanceID" ColumnName="performanceID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qenAppliedJobs">
-      <EntityTypeMapping TypeName="oriondbModel.qenAppliedJob">
-        <MappingFragment StoreEntitySet="qenAppliedJob">
-          <ScalarProperty Name="App_status_id" ColumnName="App_status_id" />
-          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="AppliedJobID" ColumnName="AppliedJobID" />
-          <ScalarProperty Name="appliedDate" ColumnName="appliedDate" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -340,6 +40,16 @@
     <EntitySetMapping Name="qendidateLists">
       <EntityTypeMapping TypeName="oriondbModel.qendidateList">
         <MappingFragment StoreEntitySet="qendidateList">
+          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+          <ScalarProperty Name="qenAddress" ColumnName="qenAddress" />
+          <ScalarProperty Name="streetNo" ColumnName="streetNo" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="socialCheck" ColumnName="socialCheck" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
           <ScalarProperty Name="CareerObjective" ColumnName="CareerObjective" />
           <ScalarProperty Name="genderID" ColumnName="genderID" />
           <ScalarProperty Name="qenImage" ColumnName="qenImage" />
@@ -357,21 +67,8 @@
           <ScalarProperty Name="qenPhone" ColumnName="qenPhone" />
           <ScalarProperty Name="qenLinkdInUrl" ColumnName="qenLinkdInUrl" />
           <ScalarProperty Name="qenEmail" ColumnName="qenEmail" />
-          <ScalarProperty Name="qenCityID" ColumnName="qenCityID" />
-          <ScalarProperty Name="qenAddress" ColumnName="qenAddress" />
           <ScalarProperty Name="qenName" ColumnName="qenName" />
           <ScalarProperty Name="qenID" ColumnName="qenID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qendidateListInJobs">
-      <EntityTypeMapping TypeName="oriondbModel.qendidateListInJob">
-        <MappingFragment StoreEntitySet="qendidateListInJob">
-          <ScalarProperty Name="SelfApplied" ColumnName="SelfApplied" />
-          <ScalarProperty Name="category" ColumnName="category" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="qendidateListID" ColumnName="qendidateListID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -406,54 +103,6 @@
           <ScalarProperty Name="collegeName" ColumnName="collegeName" />
           <ScalarProperty Name="qenID" ColumnName="qenID" />
           <ScalarProperty Name="phdid" ColumnName="phdid" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qendidateProfileSharedWiths">
-      <EntityTypeMapping TypeName="oriondbModel.qendidateProfileSharedWith">
-        <MappingFragment StoreEntitySet="qendidateProfileSharedWith">
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="datatIsCreated" ColumnName="datatIsCreated" />
-          <ScalarProperty Name="sharedDateTime" ColumnName="sharedDateTime" />
-          <ScalarProperty Name="sharedWithEmailAddress" ColumnName="sharedWithEmailAddress" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="profileSharedID" ColumnName="profileSharedID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qendidateSavedForReferences">
-      <EntityTypeMapping TypeName="oriondbModel.qendidateSavedForReference">
-        <MappingFragment StoreEntitySet="qendidateSavedForReference">
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="dateIsCreated" ColumnName="dateIsCreated" />
-          <ScalarProperty Name="savedDateTime" ColumnName="savedDateTime" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="qendidateSavedID" ColumnName="qendidateSavedID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qendidateTestSchedules">
-      <EntityTypeMapping TypeName="oriondbModel.qendidateTestSchedule">
-        <MappingFragment StoreEntitySet="qendidateTestSchedule">
-          <ScalarProperty Name="IsMeetScheduled" ColumnName="IsMeetScheduled" />
-          <ScalarProperty Name="isExamSubmitted" ColumnName="isExamSubmitted" />
-          <ScalarProperty Name="isExamAttempted" ColumnName="isExamAttempted" />
-          <ScalarProperty Name="examMarks" ColumnName="examMarks" />
-          <ScalarProperty Name="examSubmittedDateTime" ColumnName="examSubmittedDateTime" />
-          <ScalarProperty Name="examAttemptedDateTime" ColumnName="examAttemptedDateTime" />
-          <ScalarProperty Name="questionPaperSentDateTime" ColumnName="questionPaperSentDateTime" />
-          <ScalarProperty Name="questionPaperID" ColumnName="questionPaperID" />
-          <ScalarProperty Name="testScheduleCountInt" ColumnName="testScheduleCountInt" />
-          <ScalarProperty Name="ReasonReschedule" ColumnName="ReasonReschedule" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="testScheduledDateTime" ColumnName="testScheduledDateTime" />
-          <ScalarProperty Name="mailReceivedscheduled" ColumnName="mailReceivedscheduled" />
-          <ScalarProperty Name="mailSentTestScheduled" ColumnName="mailSentTestScheduled" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="mailSendID" ColumnName="mailSendID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -493,40 +142,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="qenInterviewSchedules">
-      <EntityTypeMapping TypeName="oriondbModel.qenInterviewSchedule">
-        <MappingFragment StoreEntitySet="qenInterviewSchedule">
-          <ScalarProperty Name="meetScheduledMailRecieved" ColumnName="meetScheduledMailRecieved" />
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="reasonReScheduled" ColumnName="reasonReScheduled" />
-          <ScalarProperty Name="reScheduled" ColumnName="reScheduled" />
-          <ScalarProperty Name="meetPreferredMedium" ColumnName="meetPreferredMedium" />
-          <ScalarProperty Name="meetScheduledDateTime" ColumnName="meetScheduledDateTime" />
-          <ScalarProperty Name="meetMailRepliedDateTime" ColumnName="meetMailRepliedDateTime" />
-          <ScalarProperty Name="meetMailSentDateTime" ColumnName="meetMailSentDateTime" />
-          <ScalarProperty Name="meetScheduledMailSent" ColumnName="meetScheduledMailSent" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="JobID" ColumnName="JobID" />
-          <ScalarProperty Name="meetID" ColumnName="meetID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qenMialSendInteresteds">
-      <EntityTypeMapping TypeName="oriondbModel.qenMialSendInterested">
-        <MappingFragment StoreEntitySet="qenMialSendInterested">
-          <ScalarProperty Name="dataIsUpdated" ColumnName="dataIsUpdated" />
-          <ScalarProperty Name="dataIsCreated" ColumnName="dataIsCreated" />
-          <ScalarProperty Name="mailReceivedDatetime" ColumnName="mailReceivedDatetime" />
-          <ScalarProperty Name="mailReceivedjobChancgeInterested" ColumnName="mailReceivedjobChancgeInterested" />
-          <ScalarProperty Name="mailSentDateTime" ColumnName="mailSentDateTime" />
-          <ScalarProperty Name="mailSentjobChancgeInterested" ColumnName="mailSentjobChancgeInterested" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-          <ScalarProperty Name="jobID" ColumnName="jobID" />
-          <ScalarProperty Name="qenMialSendInterestedID" ColumnName="qenMialSendInterestedID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="qenReferences">
       <EntityTypeMapping TypeName="oriondbModel.qenReference">
         <MappingFragment StoreEntitySet="qenReference">
@@ -538,16 +153,6 @@
           <ScalarProperty Name="qenRefCompany" ColumnName="qenRefCompany" />
           <ScalarProperty Name="qenRefName" ColumnName="qenRefName" />
           <ScalarProperty Name="qenRefID" ColumnName="qenRefID" />
-          <ScalarProperty Name="qenID" ColumnName="qenID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="qenResumes">
-      <EntityTypeMapping TypeName="oriondbModel.qenResume">
-        <MappingFragment StoreEntitySet="qenResume">
-          <ScalarProperty Name="qenResume1" ColumnName="qenResume" />
-          <ScalarProperty Name="qenResumeName" ColumnName="qenResumeName" />
-          <ScalarProperty Name="qenResumeID" ColumnName="qenResumeID" />
           <ScalarProperty Name="qenID" ColumnName="qenID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -577,58 +182,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="roles">
-      <EntityTypeMapping TypeName="oriondbModel.role">
-        <MappingFragment StoreEntitySet="role">
-          <ScalarProperty Name="role1" ColumnName="role" />
-          <ScalarProperty Name="roleID" ColumnName="roleID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="role_action">
-      <EntityTypeMapping TypeName="oriondbModel.role_action">
-        <MappingFragment StoreEntitySet="role_action">
-          <ScalarProperty Name="is_active" ColumnName="is_active" />
-          <ScalarProperty Name="action_name" ColumnName="action_name" />
-          <ScalarProperty Name="controller_name" ColumnName="controller_name" />
-          <ScalarProperty Name="role_id" ColumnName="role_id" />
-          <ScalarProperty Name="role_action_id" ColumnName="role_action_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="salaryUnits">
-      <EntityTypeMapping TypeName="oriondbModel.salaryUnit">
-        <MappingFragment StoreEntitySet="salaryUnit">
-          <ScalarProperty Name="Unit" ColumnName="Unit" />
-          <ScalarProperty Name="unitID" ColumnName="unitID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="skills">
       <EntityTypeMapping TypeName="oriondbModel.skill">
         <MappingFragment StoreEntitySet="skills">
           <ScalarProperty Name="skillName" ColumnName="skillName" />
           <ScalarProperty Name="skillsID" ColumnName="skillsID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="states">
-      <EntityTypeMapping TypeName="oriondbModel.state">
-        <MappingFragment StoreEntitySet="state">
-          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
-          <ScalarProperty Name="stateName" ColumnName="stateName" />
-          <ScalarProperty Name="stateID" ColumnName="stateID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="oriondbModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

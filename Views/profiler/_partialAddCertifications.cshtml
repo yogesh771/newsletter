@@ -1,7 +1,7 @@
 ﻿@model NewLetter.Models.qendidatePHD
 <script src="~/Scripts/jquery.validate.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-@using (Html.BeginForm("SavePhdInfo", "NewLetter", FormMethod.Post))
+@using (Html.BeginForm("SavePhdInfo", "profiler", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     @Html.HiddenFor(m => m.phdid)

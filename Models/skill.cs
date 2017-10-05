@@ -17,15 +17,12 @@ namespace NewLetter.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public skill()
         {
-            this.jobSkills = new HashSet<jobSkill>();
             this.qenSkills = new HashSet<qenSkill>();
         }
     
         public int skillsID { get; set; }
         public string skillName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<jobSkill> jobSkills { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<qenSkill> qenSkills { get; set; }
     }
