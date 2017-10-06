@@ -37,10 +37,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/03/2017 15:12:34</publishTime>
     </File>
     <File Include="bin/NewLetter.dll">
-      <publishTime>10/05/2017 17:27:56</publishTime>
+      <publishTime>10/06/2017 16:35:15</publishTime>
     </File>
     <File Include="bin/NewLetter.dll.config">
-      <publishTime>10/05/2017 17:27:46</publishTime>
+      <publishTime>10/06/2017 16:22:49</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>08/03/2017 15:13:38</publishTime>
@@ -403,7 +403,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/03/2017 16:52:30</publishTime>
     </File>
     <File Include="Logo/0f91dba2-10cb-4d3e-b6b3-333388ed797a_EmptyLogo.jpg">
-      <publishTime>09/22/2017 18:32:41</publishTime>
+      <publishTime>08/03/2017 16:52:30</publishTime>
     </File>
     <File Include="Logo/2abef094-5818-4f92-9b0f-491e4eff1a86_EmptyLogo.jpg">
       <publishTime>08/03/2017 16:52:30</publishTime>
@@ -432,8 +432,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Logo/EmptyLogo.jpg">
       <publishTime>08/03/2017 16:52:30</publishTime>
     </File>
+    <File Include="Logo/Emptyuser.jpg">
+      <publishTime>10/06/2017 16:09:30</publishTime>
+    </File>
     <File Include="Models/orionDBModel.edmx.diagram">
-      <publishTime>10/05/2017 12:46:11</publishTime>
+      <publishTime>10/06/2017 13:41:31</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>09/06/2017 16:41:46</publishTime>
@@ -3481,58 +3484,58 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/03/2017 12:29:32</publishTime>
     </File>
     <File Include="Views/profiler/AcademicInfo.cshtml">
-      <publishTime>10/05/2017 11:34:10</publishTime>
+      <publishTime>10/05/2017 19:24:29</publishTime>
     </File>
     <File Include="Views/profiler/CareerObjective.cshtml">
-      <publishTime>10/05/2017 11:34:28</publishTime>
+      <publishTime>10/05/2017 19:24:19</publishTime>
     </File>
     <File Include="Views/profiler/certifications.cshtml">
-      <publishTime>10/05/2017 11:35:03</publishTime>
+      <publishTime>10/05/2017 19:26:31</publishTime>
     </File>
     <File Include="Views/profiler/EmplomentInfo.cshtml">
-      <publishTime>10/05/2017 11:35:30</publishTime>
+      <publishTime>10/06/2017 13:49:32</publishTime>
     </File>
     <File Include="Views/profiler/Error.cshtml">
-      <publishTime>10/04/2017 13:36:50</publishTime>
+      <publishTime>10/05/2017 19:21:34</publishTime>
     </File>
     <File Include="Views/profiler/Introduction.cshtml">
-      <publishTime>10/05/2017 11:35:40</publishTime>
+      <publishTime>10/05/2017 19:21:35</publishTime>
     </File>
     <File Include="Views/profiler/PersonalInfo.cshtml">
-      <publishTime>10/05/2017 16:27:48</publishTime>
+      <publishTime>10/06/2017 16:39:07</publishTime>
     </File>
     <File Include="Views/profiler/RefrenceInfo.cshtml">
-      <publishTime>10/05/2017 11:36:26</publishTime>
+      <publishTime>10/05/2017 19:27:22</publishTime>
     </File>
     <File Include="Views/profiler/ShowAllDetails.cshtml">
       <publishTime>10/05/2017 11:54:10</publishTime>
     </File>
     <File Include="Views/profiler/skills.cshtml">
-      <publishTime>10/05/2017 17:17:22</publishTime>
+      <publishTime>10/05/2017 19:21:38</publishTime>
     </File>
     <File Include="Views/profiler/thankyou.cshtml">
-      <publishTime>10/04/2017 13:36:46</publishTime>
+      <publishTime>10/05/2017 19:21:39</publishTime>
     </File>
     <File Include="Views/profiler/_partialAddCertifications.cshtml">
-      <publishTime>10/05/2017 11:33:00</publishTime>
+      <publishTime>10/06/2017 13:21:21</publishTime>
     </File>
     <File Include="Views/profiler/_partialAddSkills.cshtml">
-      <publishTime>10/05/2017 11:33:11</publishTime>
+      <publishTime>10/05/2017 19:22:53</publishTime>
     </File>
     <File Include="Views/profiler/_partialGraduation.cshtml">
-      <publishTime>10/05/2017 16:45:21</publishTime>
+      <publishTime>10/05/2017 19:22:59</publishTime>
     </File>
     <File Include="Views/profiler/_partialHigherSchool.cshtml">
-      <publishTime>10/05/2017 11:33:26</publishTime>
+      <publishTime>10/05/2017 19:23:09</publishTime>
     </File>
     <File Include="Views/profiler/_partialHighSchool.cshtml">
-      <publishTime>10/05/2017 11:33:32</publishTime>
+      <publishTime>10/05/2017 19:23:14</publishTime>
     </File>
     <File Include="Views/profiler/_PartialPopUpEmployment.cshtml">
-      <publishTime>10/05/2017 11:33:36</publishTime>
+      <publishTime>10/06/2017 13:48:38</publishTime>
     </File>
     <File Include="Views/profiler/_partialPostGraduation.cshtml">
-      <publishTime>10/05/2017 11:33:40</publishTime>
+      <publishTime>10/05/2017 19:23:24</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/04/2017 13:36:54</publishTime>
@@ -3547,7 +3550,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/04/2017 13:36:42</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/05/2017 17:27:58</publishTime>
+      <publishTime>10/05/2017 19:04:11</publishTime>
     </File>
   </ItemGroup>
 </Project>

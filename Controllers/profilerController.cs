@@ -79,11 +79,10 @@ namespace NewLetter.Controllers
                 qendidateList model = null;
                 model = db.qendidateLists.Where(ex => ex.qenID == qenid).FirstOrDefault();
                 if (model != null)
-                {
-                   
+                {                   
                     ViewBag.genderID = new SelectList(db.genderLists, "genderID", "genderName", model.genderID);
-
                 }
+               
                 return View(model);
                 //}
                 //else

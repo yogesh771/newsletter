@@ -16,7 +16,7 @@ namespace NewLetter
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "NewLetter", action = "Introduction", id = UrlParameter.Optional }
+                defaults: new { controller = "profiler", action = "Introduction", id = UrlParameter.Optional }
             );
         }
     }

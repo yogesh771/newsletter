@@ -16,9 +16,9 @@ namespace NewLetter.Models
     {
         public long qenEmploymentNum { get; set; }
         public string CompanyName { get; set; }
-        public string qenEmpFrom { get; set; }
+        public Nullable<System.DateTime> qenEmpFrom { get; set; }
         public string jobDescription { get; set; }
-        public string qenEmpTo { get; set; }
+        public Nullable<System.DateTime> qenEmpTo { get; set; }
         public Nullable<double> qenSalary { get; set; }
         public string qenPosition { get; set; }
         public Nullable<System.DateTime> dataIsCreated { get; set; }

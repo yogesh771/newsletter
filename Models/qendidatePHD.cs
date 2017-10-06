@@ -21,8 +21,8 @@ namespace NewLetter.Models
         public string phdTitle { get; set; }
         public string courseField { get; set; }
         public string phdRemarks { get; set; }
-        public string phdStart { get; set; }
-        public string phdEnd { get; set; }
+        public Nullable<System.DateTime> phdStart { get; set; }
+        public Nullable<System.DateTime> phdEnd { get; set; }
         public Nullable<System.DateTime> dataIsCreated { get; set; }
         public Nullable<System.DateTime> dataIsUpdated { get; set; }
     

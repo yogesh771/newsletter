@@ -97,7 +97,7 @@
                                             
                                             <th>Company Name</th>
                                             <th>Designation</th>
-                                            <th>From</th>
+                                            <th>Date</th>
                                            
                                             <th></th>
                                         </tr>
@@ -111,7 +111,7 @@
                                              
                                                 <td>@data.CompanyName</td>
                                                 <td>@data.qenPosition</td>
-                                                <td>@data.qenEmpFrom <br>@data.qenEmpTo</td>
+                                                <td>@data.qenEmpFrom.Value.ToString("dd MMM yyyy") <br>@data.qenEmpTo.Value.ToString("dd MMM yyyy")</td>
                                                
                                                 <td>
                                                     <a onclick="return editCerificate(@data.qenEmploymentNum);"><i class="glyphicon glyphicon-edit"></i></a>

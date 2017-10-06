@@ -210,8 +210,9 @@ namespace NewLetter.Models
         public string qenNationality { get; set; }
         public string qenPassport { get; set; }
 
+
         [Required(ErrorMessage = "please enter your date of birth ")]
-        public string dob { get; set; }
+        public DateTime dob { get; set; }
 
         [Required(ErrorMessage = "please enter your city")]
         public string City { get; set; }

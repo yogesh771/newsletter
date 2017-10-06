@@ -395,6 +395,7 @@
     <Content Include="Logo\cd900576-7ed1-4922-93ab-3dd6859d1247_EmptyLogo.jpg" />
     <Content Include="Logo\d5a1b196-5613-4743-917b-ac637fa39f86_EmptyLogo.jpg" />
     <Content Include="Logo\EmptyLogo.jpg" />
+    <Content Include="Logo\Emptyuser.jpg" />
     <Content Include="Models\orionDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>orionDBModel.edmx</DependentUpon>

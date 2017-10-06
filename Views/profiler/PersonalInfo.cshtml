@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Personal Information</title>
-    
+
     <!-- Bootstrap -->
     <link href="~/css/bootstrap.css" rel="stylesheet">
     <link href="~/css/style.css" rel="stylesheet">
@@ -24,49 +24,49 @@
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-   
-    
-  
- 
- 
-<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
-@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
-<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+
+    <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDGhqKFgJrrhrXFGFHRzuPJ84hK7GbtAno"></script>
-<script>
-(function($){
-  $(window).load(function(){
+    <script>
+        (function ($) {
+            $(window).load(function () {
 
-    $("#content-1").mCustomScrollbar({
-      axis:"yx", //set both axis scrollbars
-      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
-      // change mouse-wheel axis on-the-fly 
-      callbacks:{
-        onOverflowY:function(){
-          var opt=$(this).data("mCS").opt;
-          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
-        },
-        onOverflowX:function(){
-          var opt=$(this).data("mCS").opt;
-          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
-        },
-      }
-    });
+                $("#content-1").mCustomScrollbar({
+                    axis: "yx", //set both axis scrollbars
+                    advanced: { autoExpandHorizontalScroll: true }, //auto-expand content to accommodate floated elements
+                    // change mouse-wheel axis on-the-fly
+                    callbacks: {
+                        onOverflowY: function () {
+                            var opt = $(this).data("mCS").opt;
+                            if (opt.mouseWheel.axis !== "y") opt.mouseWheel.axis = "y";
+                        },
+                        onOverflowX: function () {
+                            var opt = $(this).data("mCS").opt;
+                            if (opt.mouseWheel.axis !== "x") opt.mouseWheel.axis = "x";
+                        },
+                    }
+                });
 
-  });
-})(jQuery);
-</script>
+            });
+        })(jQuery);
+    </script>
 
     <style>
-      span.col_1.tleft.text-danger.field-validation-error :before {
-    content: " Warning ! ";
-    color: red;
-    font-weight: bold;
-}
-      .text-danger {
-    color: red;
-}
+        span.col_1.tleft.text-danger.field-validation-error :before {
+            content: " Warning ! ";
+            color: red;
+            font-weight: bold;
+        }
 
+        .text-danger {
+            color: red;
+        }
     </style>
 
     <script type="text/javascript">
@@ -83,56 +83,57 @@
 
         function Upload() {
             debugger
-                //Get reference of FileUpload.
-                var fileUpload = document.getElementById("photoA");
+            //Get reference of FileUpload.
+            var fileUpload = document.getElementById("photoA");
 
-                if (fileUpload.files[0]) {
-                    //Check whether the file is valid Image.
-                    var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
-                    if (regex.test(fileUpload.value.toLowerCase())) {
+            if (fileUpload.files[0]) {
+                //Check whether the file is valid Image.
+                var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
+                if (regex.test(fileUpload.value.toLowerCase())) {
 
-                        var reader = new FileReader();
+                    var reader = new FileReader();
 
-                        reader.readAsDataURL(fileUpload.files[0]);
-                        reader.onload = function (e) {
+                    reader.readAsDataURL(fileUpload.files[0]);
+                    reader.onload = function (e) {
 
-                            var image = new Image();
-
-
-                            image.src = e.target.result;
+                        var image = new Image();
 
 
-                            image.onload = function () {
+                        image.src = e.target.result;
+
+
+                        image.onload = function () {
+                            debugger
+                            var height = this.height;
+                            var width = this.width;
+                            if (height > 100 || width > 100) {
                                 debugger
-                                var height = this.height;
-                                var width = this.width;
-                                if (height > 100 || width > 100) {
-                                    debugger
-                                    alert("Height and Width must not exceed 100px.");
-                                    return false;
-                                }
-                                else {
-                                    $("form").unbind('submit').submit();
-                                }
-                            };
+                                alert("Height and Width must not exceed 100px.");
+                                return false;
+                            }
+                            else {
+                                $("form").unbind('submit').submit();
+                            }
+                        };
 
-                        }
-                    }
-                    else {
-                        alert("Please select .jpg,.png,.gif");
-                        return false;
                     }
                 }
-                else { $("form").unbind('submit').submit(); }
+                else {
+                    alert("Please select .jpg,.png,.gif");
+                    return false;
+                }
             }
+            else { $("form").unbind('submit').submit(); }
+        }
 
-    </script>  
+    </script>
     <script type="text/javascript">
-    var jqOld = jQuery.noConflict();
-    jqOld(function () {
-        jqOld("#txtdob").datepicker();
-    })
-    </script> 
+        var jqOld = jQuery.noConflict();
+        jqOld(function () {
+            jqOld("#txtdob").datepicker();
+        })
+    </script>
+
 </head>
 <body id="pd">
     <div class="container">
@@ -149,133 +150,143 @@
                     @using (Html.BeginForm("SavePersonalInfo", "profiler", FormMethod.Post, new { id = "msform", enctype = "multipart/form-data" }))
                     {
                         @Html.AntiForgeryToken()
-                      
-                            <div class="form" id="content-1">
+
+                        <div class="form" id="content-1">
+
+                            @Html.HiddenFor(m => m.qenID)
+                            <h1>personal information</h1>
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.qenName, new { id = "Name", placeholder = "Full Name", maxlength = "50" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.qenName, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.qenEmail, new { id = "email", placeholder = "Email", maxlength = "50" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.qenEmail, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.qenPhone, new { id = "phone", placeholder = "Mobile Number", maxlength = "10" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.qenPhone, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="group select-box">
+                                @Html.DropDownList("genderID", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.dob, "{0:d MMM yyyy}", new { id = "txtdob", placeholder = "date of birth", maxlength = "50" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.dob, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.qenNationality, new { id = "txtnational", placeholder = "Nationality", maxlength = "50" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.qenNationality, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="group">
+                                @Html.TextBoxFor(model => model.City, new { id = "locality", placeholder = "City" })<i class="glyphicon glyphicon-map-marker" data-toggle="tooltip" title="find current location" onclick="return codeLatLng();"></i>
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="group">
+                                @Html.TextBoxFor(model => model.streetNo, new { id = "street_number", placeholder = "street no", maxlength = "20" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.streetNo, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.qenAddress, new { id = "route", placeholder = "Address", maxlength = "100" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.qenAddress, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="group">
+                                @Html.TextBoxFor(model => model.state, new { id = "administrative_area_level_1", placeholder = "state", maxlength = "100" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.state, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+                            <div class="group">
+                                @Html.TextBoxFor(model => model.country, new { id = "country", placeholder = "country", maxlength = "100" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.country, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+                            <div class="group">
+                                @Html.TextBoxFor(model => model.zipCode, new { id = "postal_code", placeholder = "postal code", maxlength = "6" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.zipCode, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+                            @Html.HiddenFor(m => m.latitude)  @Html.HiddenFor(m => m.longitude)
+
+
+                            <div class="group">
+                                @Html.TextBoxFor(m => m.qenPassport, new { id = "txtpassport", placeholder = "Passport", maxlength = "20" })
+                                <div class="alert alert-warning error-custom" role="alert">
+                                    @Html.ValidationMessageFor(model => model.qenPassport, "", new { @class = "col_1 tleft text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="group">
+                                @{ if (Model.qenImage == "" || Model.qenImage == null)
+                                    {
+                                        <img id="pic" src='~/Logo/Emptyuser.jpg' alt="your image" width="100px" height="100px" />
+                                    }
+                                    else
+                                    {
+                                        <img id="pic" src='@Model.qenImage' alt="your image" width="100px" height="100px" />
+                                    }
+                                }
                                
-                                    @Html.HiddenFor(m => m.qenID)
-                                    <h1>personal information</h1>
-                                    <div class="group">
-                                        @Html.TextBoxFor(m => m.qenName, new { id = "Name", placeholder = "Full Name", maxlength = "50" })
-                                        <div class="alert alert-warning error-custom" role="alert">
-                                            @Html.ValidationMessageFor(model => model.qenName, "", new { @class = "col_1 tleft text-danger" })
-                                        </div>
-                                    </div>
-
-                                 
-                                    
-
-                                <div class="group">
-                                    @Html.TextBoxFor(m => m.qenEmail, new { id = "email", placeholder = "Email", maxlength = "50" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.qenEmail, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-                                <div class="group">
-                                    @Html.TextBoxFor(m => m.qenPhone, new { id = "phone", placeholder = "Mobile Number", maxlength = "10" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.qenPhone, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-
-                                <div class="group select-box">
-                                    @Html.DropDownList("genderID", null, htmlAttributes: new { @class = "form-control" })
-                                </div>
-
-                                <div class="group">
-                                    @Html.TextBoxFor(m => m.dob, new { id = "txtdob", placeholder = "date of birth", maxlength = "50" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.dob, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-
-                                <div class="group">
-                                    @Html.TextBoxFor(m => m.qenNationality, new { id = "txtnational", placeholder = "Nationality", maxlength = "50" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.qenNationality, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-                                  
-                                  <div class="group">
-                                        @Html.TextBoxFor(model => model.City, new { id= "locality", placeholder = "City" })
-                                        <div class="alert alert-warning error-custom" role="alert">
-                                            @Html.ValidationMessageFor(model => model.City, "", new { @class = "col_1 tleft text-danger" })
-                                        </div>
-                                     </div>
-
-                                <div class="group">
-                                    @Html.TextBoxFor(model => model.streetNo, new { id= "street_number", placeholder = "street no", maxlength = "20" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.streetNo, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-
-                                <div class="group">
-                                    @Html.TextBoxFor(m => m.qenAddress, new {id= "route", placeholder = "Address", maxlength = "100" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.qenAddress, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-
-                               
-                                <div class="group">
-                                    @Html.TextBoxFor(model => model.state, new { id= "administrative_area_level_1", placeholder = "state", maxlength = "100" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.state, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-                                <div class="group">
-                                    @Html.TextBoxFor(model => model.country, new { id= "country", placeholder = "country", maxlength = "100" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.country, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-                                <div class="group">
-                                    @Html.TextBoxFor(model => model.zipCode, new {id= "postal_code", placeholder = "postal code", maxlength = "6" })
-                                    <div class="alert alert-warning error-custom" role="alert">
-                                        @Html.ValidationMessageFor(model => model.zipCode, "", new { @class = "col_1 tleft text-danger" })
-                                    </div>
-                                </div>
-                               @Html.HiddenFor(m => m.latitude)  @Html.HiddenFor(m => m.longitude)
-
-
-                                    <div class="group">
-                                        @Html.TextBoxFor(m => m.qenPassport, new { id = "txtpassport", placeholder = "Passport", maxlength = "20" })
-                                        <div class="alert alert-warning error-custom" role="alert">
-                                            @Html.ValidationMessageFor(model => model.qenPassport, "", new { @class = "col_1 tleft text-danger" })
-                                        </div>
-                                        </div>
+                                <span class="btn btn-default btn-file">
                                    
-                                    
-                                    <div class="group">                                            
-                                                <span class="btn btn-default btn-file">
-                                                  <input type="file" id="photoA" name="files">
-                                                </span>
-                                           
+                                    <input type="file" id="photoA" name="files">
+                                </span>
 
-                                        </div>
-                                    @*<img id='img-upload' />*@
-
-                                   
-                              
 
                             </div>
-							 <div class="group next-btn-wrap">                                        
-                                        <input type="submit" class="nxt-btn" name="Next" value="Next" />                                        
-                                    </div>
-                         
-                                }
-</div>
+                            @*<img id='img-upload' />*@
+
+
+
+
+                        </div>
+                            <div class="group next-btn-wrap">
+                                <input type="submit" class="nxt-btn" name="Next" value="Next" />
+                            </div>
+
+                    }
+                </div>
             </div>
             <div class="left-text">
-                <p>Achieve your dream by jumpstarting with Qendidate</p>
+                <p>Achieve your dream by jump starting with Qendidate</p>
             </div>
         </div>
 
-    </div>  
-    
-    
-    
-    
+    </div>
+
+
+
     <script>
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
@@ -285,9 +296,11 @@
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
         jQuery(document).ready(function () {
             initAutocomplete();
+            initialize();
+            $('[data-toggle="tooltip"]').tooltip();
         });
       var placeSearch, autocomplete;
-      var componentForm = { 
+      var componentForm = {
           street_number: 'long_name',
           route: 'long_name',
       locality: 'long_name',
@@ -314,7 +327,6 @@
 
         for (var component in componentForm) {
           document.getElementById(component).value = '';
-         
         }
 
         // Get each component of the address from the place details
@@ -326,10 +338,9 @@
           if (componentForm[addressType]) {
               debugger
             var val = place.address_components[i][componentForm[addressType]];
-            document.getElementById(addressType).value = val;            
+            document.getElementById(addressType).value = val;
             document.getElementById('latitude').value =place.geometry.viewport.b.b;
-            document.getElementById('longitude').value =place.geometry.viewport.f.f;            
-      
+            document.getElementById('longitude').value =place.geometry.viewport.f.f;
 
           }
         }
@@ -339,7 +350,7 @@
       // Bias the autocomplete object to the user's geographical location,
       // as supplied by the browser's 'navigator.geolocation' object.
       function geolocate() {
-
+          debugger
           if (navigator.geolocation) {
 
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -352,14 +363,150 @@
               radius: position.coords.accuracy
             });
             debugger
+
             autocomplete.setBounds(circle.getBounds());
           });
         }
       }
     </script>
-    
-    
-      
+
+
+
+    <script type="text/javascript">
+
+        var geocoder;
+        var lat, lng;
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+        }
+        //Get the latitude and the longitude;
+        function successFunction(position) {
+             lat = position.coords.latitude;
+             lng = position.coords.longitude;
+           
+        }
+
+        function errorFunction() {
+            alert("Geocoder failed");
+        }
+
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+
+        }
+
+
+        function codeLatLng() {
+
+            var latlng = new google.maps.LatLng(lat, lng);
+            geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {                   
+                    if (results[1]) {
+                        //formatted address                     
+
+                        //====================================================
+                        for (var component in componentForm) {
+                            document.getElementById(component).value = '';
+                        }
+
+                        // Get each component of the address from the place details
+                        // and fill the corresponding field on the form.
+                        for (var i = 0; i < results[0].address_components.length; i++) {
+                            debugger
+                            var addressType = results[0].address_components[i].types[0];
+
+                            if (componentForm[addressType]) {
+                                debugger
+                                var val = results[0].address_components[i][componentForm[addressType]];
+                                document.getElementById(addressType).value = val; 
+                            }
+                        }
+                        document.getElementById('latitude').value = results[0].geometry.viewport.b.b;
+                        document.getElementById('longitude').value = results[0].geometry.viewport.f.f;
+                        //====================================================
+
+                    }
+                    else {
+                        alert("No results found");
+                    }
+                } else {
+                    alert("Geocoder failed due to: " + status);
+                }
+            });
+        }
+    </script>
+
+
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#pic').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#photoA").change(function () {
+            readURL(this);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("form").submit(function (e) {
+                debugger
+                e.preventDefault();
+                Upload();
+
+            });
+        });
+
+
+
+        function Upload() {
+            debugger
+                //Get reference of FileUpload.
+                var fileUpload = document.getElementById("photoA");
+                if (typeof (fileUpload.files[0]) != "undefined") {
+                    //Check whether the file is valid Image.
+                    var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
+                    if (regex.test(fileUpload.value.toLowerCase())) {
+                        var reader = new FileReader();
+                        reader.readAsDataURL(fileUpload.files[0]);
+                        reader.onload = function (e) {
+                            var image = new Image();
+                            image.src = e.target.result;
+                            image.onload = function () {
+                                debugger
+                                var height = this.height;
+                                var width = this.width;
+                                if (height > 100 || width > 100) {
+                                    debugger
+                                    alert("Height and Width must not exceed 100px.");
+                                    return false;
+                                }
+                                else {
+                                    $("form").unbind('submit').submit();
+                                }
+                            };
+
+                        }
+                    }
+                    else {
+                        alert("Please select .jpg,.png,.gif");
+                        return false;
+                    }
+                }
+
+                else {
+                    $("form").unbind('submit').submit();
+                }
+            }
+
+    </script>
 </body>
 </html>
-

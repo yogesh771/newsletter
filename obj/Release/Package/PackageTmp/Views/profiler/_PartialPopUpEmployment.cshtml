@@ -34,13 +34,13 @@
         </div>
      </div>
     <div class="group">
-        @Html.TextBoxFor(ex => ex.qenEmpFrom, new { placeholder = "Start Date", maxlength = "10" , @class = "datepicker" })
+        @Html.TextBoxFor(ex => ex.qenEmpFrom, "{0:d MMM yyyy}", new { placeholder = "Start Date", maxlength = "10" , @class = "datepicker" })
         <div class="alert alert-warning error-custom" role="alert">
             @Html.ValidationMessageFor(ex => ex.qenEmpFrom, "", new { @class = "col_1 tleft text-danger" })
         </div>
         </div>
     <div class="group">
-             @Html.TextBoxFor(ex => ex.qenEmpTo, new { placeholder = "End Date", maxlength = "10", @class = "datepicker" })
+             @Html.TextBoxFor(ex => ex.qenEmpTo, "{0:d MMM yyyy}", new { placeholder = "End Date", maxlength = "10", @class = "datepicker" })
             <div class="alert alert-warning error-custom" role="alert">
                 @Html.ValidationMessageFor(ex => ex.qenEmpTo, "", new { @class = "col_1 tleft text-danger" })        
             </div>

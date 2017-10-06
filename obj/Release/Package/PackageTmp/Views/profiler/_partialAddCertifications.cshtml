@@ -30,13 +30,13 @@
     </div>
 
     <div class="group">
-        @Html.TextBoxFor(m => m.phdStart, new { placeholder = "Start Date", @class = "datepicker" })
+        @Html.TextBoxFor(m => m.phdStart, "{0:d MMM yyyy}", new { placeholder = "Start Date", @class = "datepicker" })
         <div class="alert alert-warning error-custom" role="alert">
             @Html.ValidationMessageFor(model => model.phdStart, "", new { @class = "col_1 tleft text-danger" })
         </div>
     </div>
     <div class="group">
-        @Html.TextBoxFor(m => m.phdEnd, new { placeholder = "End Date", @class = "datepicker" })
+        @Html.TextBoxFor(m => m.phdEnd, "{0:d MMM yyyy}", new { placeholder = "End Date", @class = "datepicker" })
         <div class="alert alert-warning error-custom" role="alert">
             @Html.ValidationMessageFor(model => model.phdEnd, "", new { @class = "col_1 tleft text-danger" })
         </div>
