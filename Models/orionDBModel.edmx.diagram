@@ -7,14 +7,14 @@
       <Diagram DiagramId="e9b8ac0b1753435d954339fd970ae0ec" Name="Diagram1" ZoomLevel="82">
         <EntityTypeShape EntityType="oriondbModel.app_error_log" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="oriondbModel.genderList" Width="1.5" PointX="0.75" PointY="16.75" />
-        <EntityTypeShape EntityType="oriondbModel.qendidateGraduation" Width="1.5" PointX="5.25" PointY="26.75" />
+        <EntityTypeShape EntityType="oriondbModel.qendidateGraduation" Width="1.5" PointX="5.25" PointY="23" />
         <EntityTypeShape EntityType="oriondbModel.qendidateList" Width="1.5" PointX="3" PointY="13.375" />
-        <EntityTypeShape EntityType="oriondbModel.qendidatePGraduation" Width="1.5" PointX="5.25" PointY="7.5" />
-        <EntityTypeShape EntityType="oriondbModel.qendidatePHD" Width="1.5" PointX="5.25" PointY="30.75" />
-        <EntityTypeShape EntityType="oriondbModel.qenEmpDetail" Width="1.5" PointX="5.25" PointY="11.625" />
-        <EntityTypeShape EntityType="oriondbModel.qenHigherSecondary" Width="1.5" PointX="5.25" PointY="23" />
-        <EntityTypeShape EntityType="oriondbModel.qenReference" Width="1.5" PointX="5.25" PointY="3.75" />
-        <EntityTypeShape EntityType="oriondbModel.qenSecondary" Width="1.5" PointX="5.25" PointY="19.375" />
+        <EntityTypeShape EntityType="oriondbModel.qendidatePGraduation" Width="1.5" PointX="5.25" PointY="8.625" />
+        <EntityTypeShape EntityType="oriondbModel.qendidatePHD" Width="1.5" PointX="5.25" PointY="27.125" />
+        <EntityTypeShape EntityType="oriondbModel.qenEmpDetail" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="oriondbModel.qenHigherSecondary" Width="1.5" PointX="5.25" PointY="31.125" />
+        <EntityTypeShape EntityType="oriondbModel.qenReference" Width="1.5" PointX="5.25" PointY="19.375" />
+        <EntityTypeShape EntityType="oriondbModel.qenSecondary" Width="1.5" PointX="5.25" PointY="12.75" />
         <EntityTypeShape EntityType="oriondbModel.qenSkill" Width="1.5" PointX="5.25" PointY="16.375" />
         <EntityTypeShape EntityType="oriondbModel.skill" Width="1.5" PointX="3" PointY="10.75" />
         <AssociationConnector Association="oriondbModel.FK_qendidateList_genderList" />

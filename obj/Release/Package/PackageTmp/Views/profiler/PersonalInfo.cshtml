@@ -461,7 +461,9 @@
                 debugger
                 e.preventDefault();
                 Upload();
-
+                if ($(this).valid()) {
+                    $("form").unbind('submit').submit();
+                }
             });
         });
 
@@ -488,10 +490,7 @@
                                     debugger
                                     alert("Height and Width must not exceed 100px.");
                                     return false;
-                                }
-                                else {
-                                    $("form").unbind('submit').submit();
-                                }
+                                }                                
                             };
 
                         }
@@ -501,10 +500,7 @@
                         return false;
                     }
                 }
-
-                else {
-                    $("form").unbind('submit').submit();
-                }
+               
             }
 
     </script>

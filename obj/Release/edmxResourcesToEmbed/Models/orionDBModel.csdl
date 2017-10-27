@@ -97,7 +97,7 @@
     <Property Name="qenName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="qenEmail" Type="String" MaxLength="320" FixedLength="false" Unicode="true" />
     <Property Name="qenLinkdInUrl" Type="String" MaxLength="320" FixedLength="false" Unicode="true" />
-    <Property Name="qenPhone" Type="Int64" />
+    <Property Name="qenPhone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="qenNationality" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="qenPassport" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="dataIsCreated" Type="DateTime" Precision="3" />

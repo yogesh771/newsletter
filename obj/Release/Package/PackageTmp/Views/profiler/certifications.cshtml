@@ -91,34 +91,17 @@
                             {
 
                                 <table class="table">
-                                    <thead>
-                                        <tr>
-                                          
-                                            <th>Name</th>
-                                            <th>Authority</th>
-                                            <th>Licence No</th>
-                                            <th> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="certificatelistbody">
-                                      
                                         @foreach (var data in Model)
                                         {
-                                           
-                                            <tr> 
-                                                <td>@data.courseField</td>
-                                                <td>@data.collegeUniversity</td>
-                                                <td>@data.phdTitle </td>
-
-                                                <td>
-                                                    <a onclick="return editCerificate(@data.phdid);"><i class="glyphicon glyphicon-edit"></i></a>
-                                                    <a onclick="return deleteCerificate(@data.phdid,this);" id="delete_@data.phdid"><i class="glyphicon glyphicon-trash"></i></a>
-                                                </td>
-                                            </tr>
+                                             <tbody id="certificatelistbody">
+                                                <tr> <td> Name :</td><td> @data.courseField</td><td style="display:flex"><a onclick="return editCerificate(@data.phdid);"><i class="glyphicon glyphicon-edit"></i></a><a onclick="return deleteCerificate(@data.phdid,this);" id="delete_@data.phdid"><i class="glyphicon glyphicon-trash"></i></a></td></tr>
+                                                <tr><td> Authority :</td> <td>@data.collegeUniversity</td><td colspan="2"></td></tr> 
+                                                <tr><td> Licence No :</td><td colspan="2"> @data.phdTitle</td></tr>                                      
+                                           </tbody>
                                         }
-                                    </tbody>
+                                   
                                 </table>
-                                            }
+                                }
                         }
                         <div id="AddSkills">
                             @Html.Action("certificationsAddPop", new { qenid = @id })

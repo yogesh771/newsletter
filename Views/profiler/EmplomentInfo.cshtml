@@ -28,8 +28,8 @@
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
- 
-   
+
+
     <style>
         span.col_1.tleft.text-danger.field-validation-error :before {
             content: " Warning ! ";
@@ -41,32 +41,32 @@
             color: red;
         }
     </style>
-<link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
-@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
-<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script>
-(function($){
-  $(window).load(function(){
+    <link rel="stylesheet" href="~/css/jquery.mCustomScrollbar.min.css">
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>*@
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        (function ($) {
+            $(window).load(function () {
 
-    $("#content-1").mCustomScrollbar({
-      axis:"yx", //set both axis scrollbars
-      advanced:{autoExpandHorizontalScroll:true}, //auto-expand content to accommodate floated elements
-      // change mouse-wheel axis on-the-fly 
-      callbacks:{
-        onOverflowY:function(){
-          var opt=$(this).data("mCS").opt;
-          if(opt.mouseWheel.axis!=="y") opt.mouseWheel.axis="y";
-        },
-        onOverflowX:function(){
-          var opt=$(this).data("mCS").opt;
-          if(opt.mouseWheel.axis!=="x") opt.mouseWheel.axis="x";
-        },
-      }
-    });
+                $("#content-1").mCustomScrollbar({
+                    axis: "yx", //set both axis scrollbars
+                    advanced: { autoExpandHorizontalScroll: true }, //auto-expand content to accommodate floated elements
+                    // change mouse-wheel axis on-the-fly
+                    callbacks: {
+                        onOverflowY: function () {
+                            var opt = $(this).data("mCS").opt;
+                            if (opt.mouseWheel.axis !== "y") opt.mouseWheel.axis = "y";
+                        },
+                        onOverflowX: function () {
+                            var opt = $(this).data("mCS").opt;
+                            if (opt.mouseWheel.axis !== "x") opt.mouseWheel.axis = "x";
+                        },
+                    }
+                });
 
-  });
-})(jQuery);
-</script>
+            });
+        })(jQuery);
+    </script>
 
 </head>
 <body id="employment">
@@ -92,47 +92,42 @@
                             {
 
                                 <table class="table">
-                                    <thead>
-                                        <tr>
-                                            
-                                            <th>Company Name</th>
-                                            <th>Designation</th>
-                                            <th>Date</th>
-                                           
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="certificatelistbody">
-                                        @{int row = 0;  }
-                                        @foreach (var data in Model.employers)
-                                        {
-                                          
+                                    @{int row = 0;  }
+                                    @foreach (var data in Model.employers)
+                                    {
+                                        <tbody id="certificatelistbody">
                                             <tr>
-                                             
+                                                <td><strong>Company Name </strong></td>
                                                 <td>@data.CompanyName</td>
-                                                <td>@data.qenPosition</td>
-                                                <td>@data.qenEmpFrom.Value.ToString("dd MMM yyyy") <br>@data.qenEmpTo.Value.ToString("dd MMM yyyy")</td>
-                                               
-                                                <td>
+                                                <td style="display:flex">
                                                     <a onclick="return editCerificate(@data.qenEmploymentNum);"><i class="glyphicon glyphicon-edit"></i></a>
                                                     <a onclick="return deleteCerificate(@data.qenEmploymentNum,this);" id="delete_@data.qenEmploymentNum"><i class="glyphicon glyphicon-trash"></i></a>
                                                 </td>
                                             </tr>
-                                        }
-                                    </tbody>
+                                            <tr>
+                                                <td> <strong>Authority</strong> :</td>
+                                                <td>@data.qenPosition</td>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Date</strong> :</td>
+                                                <td> @data.qenEmpFrom.Value.ToString("dd MMM yyyy")</td><td>@data.qenEmpTo.Value.ToString("dd MMM yyyy")</td>
+                                            </tr>
+                                        </tbody>
+                                    }
                                 </table>
-                                            }
+                                <h1>Add more employment</h1>
+                                        }
                         }
                         <div id="AddSkills">
                             @Html.Action("EmploymentAddPop", new { qenid = @id })
                         </div>
 
-                       
                     </div>
-					 <div class="group next-btn-wrap">
-                            <a class="prev-btn" onclick="location.href='@Url.Action("certifications", "profiler",new { qenid = @Model.qenid })'">Previous</a>
-                            <a class="nxt-btn" onclick="location.href='@Url.Action("skills", "profiler",new { qenid = @Model.qenid })'">Next</a>
-                        </div>
+                    <div class="group next-btn-wrap">
+                        <a class="prev-btn" onclick="location.href='@Url.Action("certifications", "profiler",new { qenid = @Model.qenid })'">Previous</a>
+                        <a class="nxt-btn" onclick="location.href='@Url.Action("skills", "profiler",new { qenid = @Model.qenid })'">Next</a>
+                    </div>
                 </div>
             </div>
 
@@ -140,31 +135,27 @@
 
     </div>
     <script>
-        function editCerificate(empno)
-       {
-           debugger
-           var URL = '@Url.Action("EmploymentAddPop", "profiler")?empno=' + empno;
-           $.get(URL, function (data) {
-               debugger
-               $("#AddSkills").html(data);
-           });
-       }
+        function editCerificate(empno) {
+            debugger
+            var URL = '@Url.Action("EmploymentAddPop", "profiler")?empno=' + empno;
+            $.get(URL, function (data) {
+                debugger
+                $("#AddSkills").html(data);
+            });
+        }
 
-        function deleteCerificate(empno, ID)
-       {
-           debugger         
-           var URL = '@Url.Action("Deletejob", "profiler")?empno=' + empno;
+        function deleteCerificate(empno, ID) {
+            debugger
+            var URL = '@Url.Action("Deletejob", "profiler")?empno=' + empno;
 
 
-               $.get(URL, function (data) {
-                   debugger
-                   location = location.href;
-               });
+            $.get(URL, function (data) {
+                debugger
+                location = location.href;
+            });
 
 
-       }
+        }
     </script>
 </body>
 </html>
-
-    

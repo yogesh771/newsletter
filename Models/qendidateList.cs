@@ -31,7 +31,7 @@ namespace NewLetter.Models
         public string qenName { get; set; }
         public string qenEmail { get; set; }
         public string qenLinkdInUrl { get; set; }
-        public Nullable<long> qenPhone { get; set; }
+        public string qenPhone { get; set; }
         public string qenNationality { get; set; }
         public string qenPassport { get; set; }
         public Nullable<System.DateTime> dataIsCreated { get; set; }

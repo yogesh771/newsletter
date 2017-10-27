@@ -41,7 +41,7 @@
     <Property Name="qenName" Type="nvarchar" MaxLength="50" />
     <Property Name="qenEmail" Type="nvarchar" MaxLength="320" />
     <Property Name="qenLinkdInUrl" Type="nvarchar" MaxLength="320" />
-    <Property Name="qenPhone" Type="bigint" />
+    <Property Name="qenPhone" Type="varchar" MaxLength="15" />
     <Property Name="qenNationality" Type="nvarchar" MaxLength="30" />
     <Property Name="qenPassport" Type="nvarchar" MaxLength="20" />
     <Property Name="dataIsCreated" Type="datetime" />
@@ -94,8 +94,8 @@
     <Property Name="phdTitle" Type="nvarchar" MaxLength="100" />
     <Property Name="courseField" Type="nvarchar" MaxLength="500" />
     <Property Name="phdRemarks" Type="varchar" MaxLength="200" />
-    <Property Name="phdStart" Type="varchar" MaxLength="50" />
-    <Property Name="phdEnd" Type="varchar" MaxLength="50" />
+    <Property Name="phdStart" Type="date" />
+    <Property Name="phdEnd" Type="date" />
     <Property Name="dataIsCreated" Type="datetime" />
     <Property Name="dataIsUpdated" Type="datetime" />
   </EntityType>
@@ -105,9 +105,9 @@
     </Key>
     <Property Name="qenEmploymentNum" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
-    <Property Name="qenEmpFrom" Type="varchar" MaxLength="50" />
+    <Property Name="qenEmpFrom" Type="date" />
     <Property Name="jobDescription" Type="nvarchar" MaxLength="100" />
-    <Property Name="qenEmpTo" Type="varchar" MaxLength="50" />
+    <Property Name="qenEmpTo" Type="date" />
     <Property Name="qenSalary" Type="float" />
     <Property Name="qenPosition" Type="varchar" MaxLength="50" />
     <Property Name="dataIsCreated" Type="datetime" />

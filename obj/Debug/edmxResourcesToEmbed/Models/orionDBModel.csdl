@@ -97,7 +97,7 @@
     <Property Name="qenName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="qenEmail" Type="String" MaxLength="320" FixedLength="false" Unicode="true" />
     <Property Name="qenLinkdInUrl" Type="String" MaxLength="320" FixedLength="false" Unicode="true" />
-    <Property Name="qenPhone" Type="Int64" />
+    <Property Name="qenPhone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="qenNationality" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="qenPassport" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="dataIsCreated" Type="DateTime" Precision="3" />
@@ -160,8 +160,8 @@
     <Property Name="phdTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="courseField" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="phdRemarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="phdStart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="phdEnd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phdStart" Type="DateTime" Precision="0" />
+    <Property Name="phdEnd" Type="DateTime" Precision="0" />
     <Property Name="dataIsCreated" Type="DateTime" Precision="3" />
     <Property Name="dataIsUpdated" Type="DateTime" Precision="3" />
     <NavigationProperty Name="qendidateList" Relationship="oriondbModel.FK__qendidate__qenID__286302EC" FromRole="qendidatePHD" ToRole="qendidateList" />
@@ -172,9 +172,9 @@
     </Key>
     <Property Name="qenEmploymentNum" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="qenEmpFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qenEmpFrom" Type="DateTime" Precision="0" />
     <Property Name="jobDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="qenEmpTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qenEmpTo" Type="DateTime" Precision="0" />
     <Property Name="qenSalary" Type="Double" />
     <Property Name="qenPosition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="dataIsCreated" Type="DateTime" Precision="3" />

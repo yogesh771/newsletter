@@ -41,7 +41,7 @@
     <Property Name="qenName" Type="nvarchar" MaxLength="50" />
     <Property Name="qenEmail" Type="nvarchar" MaxLength="320" />
     <Property Name="qenLinkdInUrl" Type="nvarchar" MaxLength="320" />
-    <Property Name="qenPhone" Type="bigint" />
+    <Property Name="qenPhone" Type="varchar" MaxLength="15" />
     <Property Name="qenNationality" Type="nvarchar" MaxLength="30" />
     <Property Name="qenPassport" Type="nvarchar" MaxLength="20" />
     <Property Name="dataIsCreated" Type="datetime" />
